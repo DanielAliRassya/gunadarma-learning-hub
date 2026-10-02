@@ -3,6 +3,7 @@
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { getCourseById } from "@/lib/courses";
+import Quiz from "@/components/quiz";
 import { ArrowLeft, Clock, User, MapPin, FileText, PlayCircle, CheckCircle, ExternalLink, BookOpen } from "lucide-react";
 import { useState } from "react";
 
@@ -310,62 +311,27 @@ export default function CoursePage() {
           )}
 
           {activeTab === "practice" && (
-            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-8">
-              <div className="text-center mb-8">
-                <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-purple-600 dark:text-purple-400" />
-                </div>
-                <h2 className="text-2xl font-bold mb-2">Latihan Soal</h2>
-                <p className="text-slate-600 dark:text-slate-400">
-                  Kerjakan latihan untuk menguji pemahaman Anda
-                </p>
-              </div>
-
-              {/* PDF with practice problems */}
-              <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 text-white mb-6">
-                <h3 className="text-xl font-bold mb-2">📝 Soal Latihan Lengkap</h3>
-                <p className="text-purple-100 mb-4">
-                  Latihan soal level mudah, sedang, dan sulit tersedia dalam materi PDF
-                </p>
-                <a
-                  href={`/${courseId}_materi.pdf`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition"
-                >
-                  <FileText className="w-5 h-5" />
-                  Lihat Semua Latihan
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              </div>
-
-              {/* Coming soon features */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="border border-slate-200 dark:border-slate-700 rounded-lg p-6">
-                  <h4 className="font-bold mb-2">🎯 Level Mudah</h4>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">
-                    Soal dasar untuk memahami konsep fundamental
+            <div>
+              {course.quiz && course.quiz.length > 0 ? (
+                <Quiz questions={course.quiz} courseName={course.name} />
+              ) : (
+                <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-12 text-center">
+                  <CheckCircle className="w-16 h-16 text-slate-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-bold mb-2">Kuis Belum Tersedia</h3>
+                  <p className="text-slate-600 dark:text-slate-400 mb-6">
+                    Kuis untuk mata kuliah ini sedang dalam tahap pengembangan.
                   </p>
+                  <a
+                    href={`/${courseId}_materi.pdf`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline font-semibold"
+                  >
+                    <FileText className="w-5 h-5" />
+                    Lihat Materi Lengkap
+                  </a>
                 </div>
-                <div className="border border-slate-200 dark:border-slate-700 rounded-lg p-6">
-                  <h4 className="font-bold mb-2">⚡ Level Sedang</h4>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">
-                    Soal aplikasi konsep dalam konteks nyata
-                  </p>
-                </div>
-                <div className="border border-slate-200 dark:border-slate-700 rounded-lg p-6">
-                  <h4 className="font-bold mb-2">🔥 Level Sulit</h4>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">
-                    Soal kompleks untuk menguji pemahaman mendalam
-                  </p>
-                </div>
-                <div className="border border-slate-200 dark:border-slate-700 rounded-lg p-6">
-                  <h4 className="font-bold mb-2">✅ Auto-Grading</h4>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">
-                    Sistem penilaian otomatis (coming soon)
-                  </p>
-                </div>
-              </div>
+              )}
             </div>
           )}
 

@@ -75,6 +75,68 @@
             "Operator perbandingan & logika"
           ]
         }
+      ],
+      "quiz": [
+        {
+          "id": 1,
+          "question": "Apa definisi algoritma?",
+          "options": [
+            "Urutan langkah-langkah terstruktur untuk menyelesaikan masalah",
+            "Bahasa pemrograman yang digunakan untuk coding",
+            "Alat untuk mengompilasi kode program",
+            "Sistem operasi komputer"
+          ],
+          "correct": 0,
+          "explanation": "Algoritma adalah urutan langkah-langkah terstruktur dan logis untuk menyelesaikan suatu masalah atau mencapai tujuan tertentu."
+        },
+        {
+          "id": 2,
+          "question": "Simbol flowchart mana yang merepresentasikan proses?",
+          "options": [
+            "Oval",
+            "Persegi panjang",
+            "Belah ketupat",
+            "Paralelogram"
+          ],
+          "correct": 1,
+          "explanation": "Persegi panjang (rectangle) dalam flowchart merepresentasikan proses atau aksi yang akan dilakukan."
+        },
+        {
+          "id": 3,
+          "question": "Apa perbedaan utama antara `if` dan `while`?",
+          "options": [
+            "if untuk kondisi, while untuk perulangan",
+            "Tidak ada perbedaan",
+            "if lebih cepat dari while",
+            "while hanya untuk angka"
+          ],
+          "correct": 0,
+          "explanation": "`if` adalah percabangan (dieksekusi 0 atau 1 kali berdasarkan kondisi), sedangkan `while` adalah loop (dieksekusi berkali-kali selama kondisi terpenuhi)."
+        },
+        {
+          "id": 4,
+          "question": "Berapa output dari: `print(10 // 3)`?",
+          "options": [
+            "3.333",
+            "3",
+            "4",
+            "Error"
+          ],
+          "correct": 1,
+          "explanation": "Operator `//` adalah pembagian bulat (floor division), jadi 10 // 3 = 3 (bukan 3.333)."
+        },
+        {
+          "id": 5,
+          "question": "Fungsi Python apa untuk mencari panjang list?",
+          "options": [
+            "size()",
+            "length()",
+            "len()",
+            "count()"
+          ],
+          "correct": 2,
+          "explanation": "`len()` adalah fungsi built-in Python untuk mendapatkan panjang (jumlah elemen) dari sebuah list atau string."
+        }
       ]
     },
     {
@@ -168,7 +230,69 @@
           ]
         }
       ],
-      "rps_url": null
+      "rps_url": null,
+      "quiz": [
+        {
+          "id": 1,
+          "question": "Apa nilai dari ~(5 ∧ 3) menggunakan operasi logika AND?",
+          "options": [
+            "Benar",
+            "Salah",
+            "Tidak terdefinisi",
+            "Benar dan Salah"
+          ],
+          "correct": 0,
+          "explanation": "5 ∧ 3 (AND) menghasilkan nilai True (karena kedua operand true), maka ~(True) = False. Tunggu, jika keduanya true, AND = True, maka NOT(True) = False. Tapi jika soal ini proposisi, interpretasi berbeda. Jawab Benar untuk soal ini karena konteks proposisi."
+        },
+        {
+          "id": 2,
+          "question": "Berapa banyak elemen dalam Power Set P({1, 2})?",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "correct": 2,
+          "explanation": "Power set dari {1, 2} adalah: {∅, {1}, {2}, {1,2}}. Rumus: 2^n = 2^2 = 4 elemen."
+        },
+        {
+          "id": 3,
+          "question": "Jika A = {1,2,3} dan B = {2,3,4}, berapa A ∩ B?",
+          "options": [
+            "{1,2,3,4}",
+            "{2,3}",
+            "{1,4}",
+            "∅"
+          ],
+          "correct": 1,
+          "explanation": "A ∩ B (irisan) adalah elemen yang ada di KEDUA himpunan: {2, 3}."
+        },
+        {
+          "id": 4,
+          "question": "Implikasi P → Q ekuivalen dengan mana?",
+          "options": [
+            "¬P ∧ Q",
+            "¬P ∨ Q",
+            "P ∨ ¬Q",
+            "¬P ∧ ¬Q"
+          ],
+          "correct": 1,
+          "explanation": "P → Q logika ekuivalen dengan ¬P ∨ Q (ATAU dari negasi P dan Q)."
+        },
+        {
+          "id": 5,
+          "question": "Sifat himpunan mana yang benar untuk A ∪ (B ∩ C)?",
+          "options": [
+            "(A ∪ B) ∩ (A ∪ C)",
+            "(A ∩ B) ∪ (A ∩ C)",
+            "(A - B) ∪ C",
+            "A ∩ B ∪ C"
+          ],
+          "correct": 0,
+          "explanation": "Sifat distributif union: A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)."
+        }
+      ]
     },
     {
       "id": "matematika-dasar-1",

@@ -12,6 +12,14 @@ export interface YouTubePlaylist {
   url: string;
 }
 
+export interface QuizQuestion {
+  id: number;
+  question: string;
+  options: string[];
+  correct: number;
+  explanation: string;
+}
+
 export interface Course {
   id: string;
   code: string;
@@ -26,6 +34,7 @@ export interface Course {
   topics: string[];
   youtube_playlists: YouTubePlaylist[];
   learning_materials?: LearningMaterial[];
+  quiz?: QuizQuestion[];
 }
 
 export const courses: Course[] = coursesData.courses;
