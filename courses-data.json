@@ -1,0 +1,205 @@
+{
+  "semester": 1,
+  "program": "S1 Informatika - Sarmag",
+  "tahun_ajaran": "2026/2027",
+  "courses": [
+    {
+      "id": "algoritma-pemrograman-1",
+      "code": "IT045301",
+      "name": "Algoritma dan Pemrograman 1",
+      "credits": 2,
+      "day": "Kamis",
+      "time": "1/2/3",
+      "lecturer": "Dr. Rodiah",
+      "room": "F8443",
+      "rps_url": "https://rps.gunadarma.ac.id/file/1761528544839_mk06_rps_algoritma_dan_pemrograman_1.pdf",
+      "description": "Dasar-dasar pemrograman komputer serta konsep fundamental dalam merancang dan menganalisis algoritma",
+      "topics": [
+        "Pengenalan Algoritma & Flowchart",
+        "Konsep Pemrograman Dasar",
+        "Struktur Kontrol (Percabangan)",
+        "Perulangan (Looping)",
+        "Array & Matriks",
+        "Fungsi & Prosedur",
+        "Teknik Pengurutan (Sorting)",
+        "Pemrograman Python Dasar"
+      ],
+      "youtube_playlists": [
+        {
+          "title": "Algoritma dan Pemrograman",
+          "url": "https://www.youtube.com/playlist?list=PLLatmIo5jv9e1sIWoIOdu4k-hYkO39rxL"
+        },
+        {
+          "title": "Kelas Terbuka - Python",
+          "url": "https://www.youtube.com/@KelasTerbuka"
+        },
+        {
+          "title": "Programmer Zaman Now - Python",
+          "url": "https://www.youtube.com/watch?v=fmZX-5r0t5E"
+        }
+      ]
+    },
+    {
+      "id": "praktikum-algoritma-pemrograman-1",
+      "code": "IT045301P",
+      "name": "Praktikum Algoritma dan Pemrograman 1",
+      "credits": 1,
+      "day": "Kamis",
+      "time": "4",
+      "lecturer": "Dr. Rodiah",
+      "room": "F8443",
+      "description": "Praktikum pemrograman Python untuk implementasi algoritma dasar"
+    },
+    {
+      "id": "matematika-informatika-1",
+      "code": "IT045213",
+      "name": "Matematika Informatika 1",
+      "credits": 2,
+      "day": "Rabu",
+      "time": "6/7",
+      "lecturer": "Dr. Feni Andriani",
+      "room": "F8443",
+      "description": "Matematika diskrit untuk ilmu komputer",
+      "topics": [
+        "Logika Matematika",
+        "Himpunan (Set Theory)",
+        "Relasi dan Fungsi",
+        "Matriks",
+        "Induksi Matematika",
+        "Rekursi",
+        "Kombinatorik",
+        "Graf dan Pohon",
+        "Aljabar Boolean"
+      ]
+    },
+    {
+      "id": "matematika-dasar-1",
+      "code": "IT045201",
+      "name": "Matematika Dasar 1",
+      "credits": 2,
+      "day": "Selasa",
+      "time": "6/7",
+      "lecturer": "Dr. Desti Riminarsih",
+      "room": "F8443",
+      "topics": [
+        "Bilangan Real",
+        "Persamaan & Pertidaksamaan",
+        "Fungsi",
+        "Limit",
+        "Turunan",
+        "Integral",
+        "Matriks",
+        "Vektor"
+      ]
+    },
+    {
+      "id": "fisika-kimia-dasar-1",
+      "code": "IT045204",
+      "name": "Fisika dan Kimia Dasar 1",
+      "credits": 2,
+      "day": "Senin",
+      "time": "2/3",
+      "lecturer": "Nur Fatihah ST., MT",
+      "room": "F8443",
+      "rps_url": "https://rps.gunadarma.ac.id/file/1678341645058_fisika_dan_kimia_dasar_1a_it042204.pdf",
+      "topics": [
+        "Besaran & Satuan",
+        "Kinematika",
+        "Dinamika",
+        "Energi & Usaha",
+        "Momentum",
+        "Struktur Atom",
+        "Ikatan Kimia",
+        "Reaksi Kimia"
+      ]
+    },
+    {
+      "id": "pengantar-teknologi-komputer",
+      "code": "IT045101",
+      "name": "Pengantar Teknologi Komputer dan Informatika",
+      "credits": 2,
+      "day": "Kamis",
+      "time": "6/7",
+      "lecturer": "Dr. Ike Putri Kusumawijaya",
+      "room": "F8443",
+      "topics": [
+        "Sejarah Komputer",
+        "Arsitektur Komputer",
+        "Sistem Operasi",
+        "Jaringan Komputer",
+        "Database",
+        "Software Engineering",
+        "AI & Machine Learning",
+        "Cybersecurity"
+      ]
+    },
+    {
+      "id": "bahasa-inggris",
+      "code": "IT011104",
+      "name": "Bahasa Inggris",
+      "credits": 2,
+      "day": "Rabu",
+      "time": "3/4",
+      "lecturer": "Ir. Taufik Hidayat, MM",
+      "room": "F8443",
+      "rps_url": "https://rps.gunadarma.ac.id/file/1678340206710_bahasa_inggris_1_it011104.pdf",
+      "topics": [
+        "Grammar Basics",
+        "Reading Comprehension",
+        "Writing Skills",
+        "Technical English",
+        "Presentation Skills"
+      ]
+    },
+    {
+      "id": "bahasa-indonesia",
+      "code": "IT011102",
+      "name": "Bahasa Indonesia",
+      "credits": 2,
+      "day": "Selasa",
+      "time": "3/4",
+      "lecturer": "Dr. Choirul Umam",
+      "room": "F8443",
+      "topics": [
+        "EYD & Tata Bahasa",
+        "Paragraf Efektif",
+        "Karya Ilmiah",
+        "Presentasi",
+        "Argumentasi"
+      ]
+    },
+    {
+      "id": "pendidikan-pancasila",
+      "code": "IT011201",
+      "name": "Pendidikan Pancasila",
+      "credits": 2,
+      "day": "Senin",
+      "time": "4/5",
+      "lecturer": "Gatot Subiyakto SH., MM",
+      "room": "F8443",
+      "topics": [
+        "Sejarah Pancasila",
+        "Nilai-nilai Pancasila",
+        "Pancasila dalam Konteks Kekinian",
+        "Implementasi Pancasila"
+      ]
+    },
+    {
+      "id": "legal-aspek-teknologi",
+      "code": "IT011301",
+      "name": "Legal Aspek Produk Teknologi Informasi dan Komunikasi",
+      "credits": 2,
+      "day": "Jumat",
+      "time": "7/8",
+      "lecturer": "Risdiandri Iskandar S.Kom., MM",
+      "room": "F8443",
+      "topics": [
+        "UU ITE",
+        "HAKI & Copyright",
+        "Privacy & Data Protection",
+        "Cybercrime",
+        "Etika Profesi IT"
+      ]
+    }
+  ]
+}
