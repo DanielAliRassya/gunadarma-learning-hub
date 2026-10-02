@@ -173,7 +173,69 @@
           "url": "https://www.youtube.com/watch?v=a6xeWbrIO_s"
         }
       ],
-      "rps_url": null
+      "rps_url": null,
+      "quiz": [
+        {
+          "id": 1,
+          "question": "IDE Python yang populer adalah?",
+          "options": [
+            "Microsoft Word",
+            "PyCharm / VS Code",
+            "Photoshop",
+            "Excel"
+          ],
+          "correct": 1,
+          "explanation": "PyCharm dan VS Code adalah IDE (Integrated Development Environment) populer untuk Python."
+        },
+        {
+          "id": 2,
+          "question": "Fungsi input() di Python mengembalikan tipe data?",
+          "options": [
+            "Integer",
+            "String",
+            "Float",
+            "Boolean"
+          ],
+          "correct": 1,
+          "explanation": "Fungsi input() selalu mengembalikan string. Perlu konversi int() atau float() untuk tipe numerik."
+        },
+        {
+          "id": 3,
+          "question": "Apa output dari: print(2**3)?",
+          "options": [
+            "6",
+            "8",
+            "9",
+            "Error"
+          ],
+          "correct": 1,
+          "explanation": "Operator ** adalah pangkat, jadi 2**3 = 2^3 = 8."
+        },
+        {
+          "id": 4,
+          "question": "Breakpoint dalam debugging berfungsi untuk?",
+          "options": [
+            "Menghapus kode",
+            "Menghentikan eksekusi sementara",
+            "Menjalankan kode cepat",
+            "Mengkompilasi program"
+          ],
+          "correct": 1,
+          "explanation": "Breakpoint menghentikan eksekusi program pada baris tertentu sehingga programmer bisa memeriksa variabel."
+        },
+        {
+          "id": 5,
+          "question": "File Python memiliki ekstensi?",
+          "options": [
+            ".txt",
+            ".py",
+            ".doc",
+            ".java"
+          ],
+          "correct": 1,
+          "explanation": "File Python menggunakan ekstensi .py (contoh: program.py)."
+        }
+      ]
     },
     {
       "id": "matematika-informatika-1",
@@ -324,7 +386,69 @@
           "url": "https://lmsspada.kemdiktisaintek.go.id/course/view.php?id=4038"
         }
       ],
-      "rps_url": null
+      "rps_url": null,
+      "quiz": [
+        {
+          "id": 1,
+          "question": "Turunan dari f(x) = 3x^2 adalah?",
+          "options": [
+            "3x",
+            "6x",
+            "6",
+            "x^2"
+          ],
+          "correct": 1,
+          "explanation": "d/dx(3x^2) = 3*2*x = 6x."
+        },
+        {
+          "id": 2,
+          "question": "Integral dari (2x + 1) dx adalah?",
+          "options": [
+            "2x^2 + x + C",
+            "x^2 + x + C",
+            "2x + C",
+            "x^2 + 1 + C"
+          ],
+          "correct": 1,
+          "explanation": "Integral (2x+1) dx = x^2 + x + C."
+        },
+        {
+          "id": 3,
+          "question": "Limit dari (x^2-1)/(x-1) ketika x menuju 1?",
+          "options": [
+            "0",
+            "1",
+            "2",
+            "Tidak ada"
+          ],
+          "correct": 2,
+          "explanation": "(x^2-1)/(x-1) = (x+1), limit x=1 = 2."
+        },
+        {
+          "id": 4,
+          "question": "Domain dari f(x) = sqrt(x-2) adalah?",
+          "options": [
+            "x > 2",
+            "x >= 2",
+            "x < 2",
+            "Semua bilangan real"
+          ],
+          "correct": 1,
+          "explanation": "Untuk sqrt real: x-2 >= 0, jadi x >= 2."
+        },
+        {
+          "id": 5,
+          "question": "Komposisi (f∘g)(x) dengan f(x)=2x+1 dan g(x)=x^2?",
+          "options": [
+            "2x^2 + 1",
+            "x^2 + 1",
+            "2x + 1",
+            "(2x+1)^2"
+          ],
+          "correct": 0,
+          "explanation": "(f∘g)(x) = f(x^2) = 2x^2 + 1."
+        }
+      ]
     },
     {
       "id": "fisika-kimia-dasar-1",
@@ -355,6 +479,68 @@
         {
           "title": "Fisika Dasar 1 - FMIPA ITB Style",
           "url": "https://www.youtube.com/playlist?PLnScQGMvtyT15gWR-tgjY-XRLMhyFpH_K"
+        }
+      ],
+      "quiz": [
+        {
+          "id": 1,
+          "question": "Apa satuan SI untuk gaya?",
+          "options": [
+            "Watt",
+            "Newton",
+            "Joule",
+            "Pascal"
+          ],
+          "correct": 1,
+          "explanation": "Newton (N) adalah satuan SI untuk gaya. 1 N = 1 kg*m/s^2."
+        },
+        {
+          "id": 2,
+          "question": "Hukum Newton kedua menyatakan F = ?",
+          "options": [
+            "m/v",
+            "m*a",
+            "m*v",
+            "a/m"
+          ],
+          "correct": 1,
+          "explanation": "Hukum Newton kedua: F = m*a (gaya = massa x percepatan)."
+        },
+        {
+          "id": 3,
+          "question": "Apa rumus energi kinetik?",
+          "options": [
+            "mgh",
+            "1/2 mv^2",
+            "mv",
+            "m/v"
+          ],
+          "correct": 1,
+          "explanation": "Energi kinetik = 1/2 x m x v^2 (setengah massa kali kecepatan kuadrat)."
+        },
+        {
+          "id": 4,
+          "question": "Mol adalah satuan untuk?",
+          "options": [
+            "Massa",
+            "Jumlah zat",
+            "Volume",
+            "Energi"
+          ],
+          "correct": 1,
+          "explanation": "Mol adalah satuan jumlah zat dalam kimia, menyatakan jumlah partikel (6,022 x 10^23)."
+        },
+        {
+          "id": 5,
+          "question": "Rumus tekanan adalah?",
+          "options": [
+            "F*A",
+            "F/A",
+            "A/F",
+            "F+A"
+          ],
+          "correct": 1,
+          "explanation": "Tekanan = Gaya / Luas (P = F/A), satuan Pascal (Pa)."
         }
       ]
     },
@@ -394,7 +580,69 @@
           "url": "https://www.youtube.com/watch?v=kYwIbMpA0io"
         }
       ],
-      "rps_url": "https://rps.gunadarma.ac.id/file/1678430797434_pengantar_teknologi_komputer_dan_informatika_it045220.pdf"
+      "rps_url": "https://rps.gunadarma.ac.id/file/1678430797434_pengantar_teknologi_komputer_dan_informatika_it045220.pdf",
+      "quiz": [
+        {
+          "id": 1,
+          "question": "Siapa penemu komputer modern pertama?",
+          "options": [
+            "Bill Gates",
+            "Charles Babbage",
+            "Steve Jobs",
+            "Alan Turing"
+          ],
+          "correct": 1,
+          "explanation": "Charles Babbage dikenal sebagai 'Bapak Komputer'."
+        },
+        {
+          "id": 2,
+          "question": "RAM singkatan dari?",
+          "options": [
+            "Read And Memory",
+            "Random Access Memory",
+            "Read Access Memory",
+            "Random And Memory"
+          ],
+          "correct": 1,
+          "explanation": "RAM = Random Access Memory."
+        },
+        {
+          "id": 3,
+          "question": "OS singkatan dari?",
+          "options": [
+            "Open System",
+            "Operating System",
+            "Output System",
+            "Online System"
+          ],
+          "correct": 1,
+          "explanation": "OS = Operating System."
+        },
+        {
+          "id": 4,
+          "question": "IP Address versi 4 terdiri dari berapa bit?",
+          "options": [
+            "16 bit",
+            "32 bit",
+            "64 bit",
+            "128 bit"
+          ],
+          "correct": 1,
+          "explanation": "IPv4 terdiri dari 32 bit (4 oktet)."
+        },
+        {
+          "id": 5,
+          "question": "HTTP singkatan dari?",
+          "options": [
+            "Hyper Text Transfer Protocol",
+            "High Tech Transfer Process",
+            "Hyper Text Transfer Process",
+            "Host Text Transfer Protocol"
+          ],
+          "correct": 0,
+          "explanation": "HTTP = HyperText Transfer Protocol."
+        }
+      ]
     },
     {
       "id": "bahasa-inggris",
@@ -419,6 +667,68 @@
         {
           "title": "Bahasa Inggris Komputer - Playlist",
           "url": "https://www.youtube.com/playlist?list=PLiZ8a1uyOgqeclIIL71MEtE-NAYxkrJN8"
+        }
+      ],
+      "quiz": [
+        {
+          "id": 1,
+          "question": "Past tense dari 'go' adalah?",
+          "options": [
+            "goed",
+            "went",
+            "gone",
+            "going"
+          ],
+          "correct": 1,
+          "explanation": "'Went' adalah bentuk past tense dari 'go' (irregular verb)."
+        },
+        {
+          "id": 2,
+          "question": "Pilihlah yang benar: 'She ___ to school every day.'",
+          "options": [
+            "go",
+            "goes",
+            "going",
+            "gone"
+          ],
+          "correct": 1,
+          "explanation": "'Goes' untuk subjek orang ketiga tunggal (she/he/it) dalam simple present tense."
+        },
+        {
+          "id": 3,
+          "question": "Arti dari 'I am reading a book' adalah?",
+          "options": [
+            "Saya telah membaca buku",
+            "Saya sedang membaca buku",
+            "Saya akan membaca buku",
+            "Saya suka membaca buku"
+          ],
+          "correct": 1,
+          "explanation": "Present continuous (am reading) menyatakan aksi yang sedang berlangsung."
+        },
+        {
+          "id": 4,
+          "question": "Plural dari 'child' adalah?",
+          "options": [
+            "childs",
+            "children",
+            "childes",
+            "childen"
+          ],
+          "correct": 1,
+          "explanation": "'Children' adalah bentuk jamak tidak beraturan dari 'child'."
+        },
+        {
+          "id": 5,
+          "question": "Pilihlah kata yang tepat: 'This is ___ apple.'",
+          "options": [
+            "a",
+            "an",
+            "the",
+            "none"
+          ],
+          "correct": 1,
+          "explanation": "'An' digunakan sebelum kata yang diawali huruf vokal (apple = a-p-l-e, huruf a adalah vokal)."
         }
       ]
     },
@@ -449,7 +759,69 @@
           "url": "https://www.youtube.com/watch?v=gEZlBawWDw4"
         }
       ],
-      "rps_url": null
+      "rps_url": null,
+      "quiz": [
+        {
+          "id": 1,
+          "question": "Apa fungsi utama bahasa?",
+          "options": [
+            "Hiburan semata",
+            "Alat komunikasi",
+            "Seni lukis",
+            "Olahraga"
+          ],
+          "correct": 1,
+          "explanation": "Fungsi utama bahasa adalah sebagai alat komunikasi untuk menyampaikan pikiran dan perasaan."
+        },
+        {
+          "id": 2,
+          "question": "Kalimat efektif harus memenuhi syarat kecuali?",
+          "options": [
+            "Ketepatan struktur",
+            "Kepaduan",
+            "Kelogisan",
+            "Kelambanan"
+          ],
+          "correct": 3,
+          "explanation": "Syarat kalimat efektif: ketepatan struktur, kepaduan, kelogisan, kehematan, dan kesesuaian. Bukan kelambanan."
+        },
+        {
+          "id": 3,
+          "question": "Paragraf deduktif dimulai dengan?",
+          "options": [
+            "Contoh",
+            "Penjelasan",
+            "Kesimpulan",
+            "Data"
+          ],
+          "correct": 2,
+          "explanation": "Paragraf deduktif dimulai dengan kalimat utama (kesimpulan/ide pokok), diikuti penjelasan."
+        },
+        {
+          "id": 4,
+          "question": "EYD singkatan dari?",
+          "options": [
+            "Ejaan Yang Disempurnakan",
+            "Ejaan Yang Disederhanakan",
+            "Ejaan Yang Disarankan",
+            "Ejaan Yang Diterapkan"
+          ],
+          "correct": 0,
+          "explanation": "EYD = Ejaan Yang Disempurnakan (sekarang disebut PUEBI: Pedoman Umum Ejaan Bahasa Indonesia)."
+        },
+        {
+          "id": 5,
+          "question": "Kata baku untuk 'bego' adalah?",
+          "options": [
+            "Bodoh",
+            "Dungu",
+            "Tidak pintar",
+            "Semua benar"
+          ],
+          "correct": 3,
+          "explanation": "Semua pilihan adalah kata baku yang dapat menggantikan kata tidak baku 'bego'."
+        }
+      ]
     },
     {
       "id": "pendidikan-pancasila",
@@ -478,7 +850,69 @@
           "url": "https://www.youtube.com/watch?v=9MPutQ-MRME"
         }
       ],
-      "rps_url": null
+      "rps_url": null,
+      "quiz": [
+        {
+          "id": 1,
+          "question": "Siapa yang merumuskan Pancasila?",
+          "options": [
+            "Soekarno",
+            "Mohammad Hatta",
+            "Mohammad Yamin",
+            "Ir. Soekarno"
+          ],
+          "correct": 3,
+          "explanation": "Ir. Soekarno (Bung Karno) merumuskan Pancasila pada 1 Juni 1945 dalam pidato 'Lahirnya Pancasila'."
+        },
+        {
+          "id": 2,
+          "question": "Sila pertama Pancasila adalah?",
+          "options": [
+            "Kemanusiaan",
+            "Ketuhanan",
+            "Persatuan",
+            "Keadilan"
+          ],
+          "correct": 1,
+          "explanation": "Sila pertama: Ketuhanan Yang Maha Esa."
+        },
+        {
+          "id": 3,
+          "question": "UUD 1945 disahkan tanggal?",
+          "options": [
+            "17 Agustus 1945",
+            "18 Agustus 1945",
+            "1 Juni 1945",
+            "10 November 1945"
+          ],
+          "correct": 1,
+          "explanation": "UUD 1945 disahkan oleh PPKI pada 18 Agustus 1945, sehari setelah proklamasi kemerdekaan."
+        },
+        {
+          "id": 4,
+          "question": "Bhinneka Tunggal Ika berasal dari bahasa?",
+          "options": [
+            "Sanskrit",
+            "Jawa Kuno",
+            "Arab",
+            "Latin"
+          ],
+          "correct": 1,
+          "explanation": "Bhinneka Tunggal Ika berasal dari bahasa Jawa Kuno (dalam karya Sutasoma karangan Mpu Tantular)."
+        },
+        {
+          "id": 5,
+          "question": "Sila kelima Pancasila berkaitan dengan?",
+          "options": [
+            "Keadilan sosial",
+            "Demokrasi",
+            "Persatuan",
+            "Ketuhanan"
+          ],
+          "correct": 0,
+          "explanation": "Sila kelima: Keadilan Sosial bagi Seluruh Rakyat Indonesia."
+        }
+      ]
     },
     {
       "id": "legal-aspek-teknologi",
@@ -508,7 +942,69 @@
           "url": "https://www.slideserve.com/louisa/legal-aspek-produk-tik"
         }
       ],
-      "rps_url": null
+      "rps_url": null,
+      "quiz": [
+        {
+          "id": 1,
+          "question": "UU ITE singkatan dari?",
+          "options": [
+            "Undang-Undang Informasi dan Transaksi Elektronik",
+            "Undang-Undang Internet dan Teknologi Elektronik",
+            "Undang-Undang Informasi Teknologi Elektronik",
+            "Undang-Undang Ilmu Teknologi Elektronik"
+          ],
+          "correct": 0,
+          "explanation": "UU ITE = Undang-Undang Informasi dan Transaksi Elektronik."
+        },
+        {
+          "id": 2,
+          "question": "HKI singkatan dari?",
+          "options": [
+            "Hak Kepemilikan Industri",
+            "Hak Kekayaan Intelektual",
+            "Hak Kewirausahaan Indonesia",
+            "Hak Karya Ilmiah"
+          ],
+          "correct": 1,
+          "explanation": "HKI = Hak Kekayaan Intelektual."
+        },
+        {
+          "id": 3,
+          "question": "Lisensi open source yang paling populer?",
+          "options": [
+            "MIT License",
+            "Windows License",
+            "Apple License",
+            "Proprietary License"
+          ],
+          "correct": 0,
+          "explanation": "MIT License adalah salah satu lisensi open source paling populer."
+        },
+        {
+          "id": 4,
+          "question": "Data pribadi yang dilindungi UU PDP termasuk?",
+          "options": [
+            "Nama, alamat, nomor telepon",
+            "Warna favorit",
+            "Makanan kesukaan",
+            "Hobi"
+          ],
+          "correct": 0,
+          "explanation": "UU PDP melindungi data pribadi seperti nama, alamat, nomor telepon."
+        },
+        {
+          "id": 5,
+          "question": "Etika TIK mencakup kecuali?",
+          "options": [
+            "Privasi",
+            "Keamanan",
+            "Kepemilikan",
+            "Kecepatan internet"
+          ],
+          "correct": 3,
+          "explanation": "Etika TIK mencakup privasi, keamanan, kepemilikan, akurasi, dan aksesibilitas."
+        }
+      ]
     }
   ]
 }
