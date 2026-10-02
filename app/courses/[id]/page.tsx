@@ -34,7 +34,7 @@ export default function CoursePage() {
   const params = useParams();
   const courseId = params.id as string;
   const course = getCourseById(courseId);
-  const [activeTab, setActiveTab] = useState<"overview" | "videos" | "materials" | "topics" | "notes">("overview");
+  const [activeTab, setActiveTab] = useState<"overview" | "videos" | "materials" | "topics" | "practice" | "notes">("overview");
   const [notes, setNotes] = useState(() => {
     if (typeof window !== "undefined") {
       return localStorage.getItem(`notes-${courseId}`) || "";
@@ -132,6 +132,7 @@ export default function CoursePage() {
               { id: "videos", label: "Video" },
               { id: "materials", label: "Materi" },
               { id: "topics", label: "Topik" },
+              { id: "practice", label: "Latihan" },
               { id: "notes", label: "Catatan" },
             ].map((tab) => (
               <button
@@ -229,46 +230,142 @@ export default function CoursePage() {
           {activeTab === "materials" && (
             <div className="space-y-4">
               {course.learning_materials && course.learning_materials.length > 0 ? (
-                course.learning_materials.map((material, i) => (
-                  <div
-                    key={i}
-                    className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-6 hover:shadow-lg transition"
-                  >
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-lg flex items-center justify-center font-bold flex-shrink-0">
-                        W{material.week}
-                      </div>
+                <>
+                  {/* PDF Viewer Button */}
+                  <div className="bg-gradient-to-r from-blue-600 to-emerald-600 rounded-lg p-6 text-white mb-6">
+                    <div className="flex items-center gap-4">
+                      <BookOpen className="w-12 h-12" />
                       <div className="flex-1">
-                        <h3 className="text-lg font-bold mb-1">{material.title}</h3>
-                        <p className="text-sm text-slate-500 dark:text-slate-400">Minggu {material.week}</p>
-                      </div>
-                    </div>
-                    <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
-                      {material.summary}
-                    </p>
-                    <div>
-                      <h4 className="font-semibold text-sm mb-3">Konsep Kunci:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {material.key_concepts.map((concept, j) => (
-                          <span
-                            key={j}
-                            className="badge bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 border-0 text-xs py-1 px-3"
-                          >
-                            {concept}
-                          </span>
-                        ))}
+                        <h3 className="text-xl font-bold mb-2">Materi Pembelajaran Lengkap</h3>
+                        <p className="text-blue-100 mb-4">
+                          Penjelasan detail, contoh kode, dan konsep fundamental dalam format PDF
+                        </p>
+                        <a
+                          href={`/${courseId}_materi.pdf`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition"
+                        >
+                          <FileText className="w-5 h-5" />
+                          Buka Materi PDF
+                          <ExternalLink className="w-4 h-4" />
+                        </a>
                       </div>
                     </div>
                   </div>
-                ))
+
+                  {/* Preview Cards */}
+                  {course.learning_materials.map((material, i) => (
+                    <div
+                      key={i}
+                      className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-6 hover:shadow-lg transition"
+                    >
+                      <div className="flex items-start gap-4 mb-4">
+                        <div className="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-lg flex items-center justify-center font-bold flex-shrink-0">
+                          W{material.week}
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-lg font-bold mb-1">{material.title}</h3>
+                          <p className="text-sm text-slate-500 dark:text-slate-400">Minggu {material.week}</p>
+                        </div>
+                      </div>
+                      <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
+                        {material.summary}
+                      </p>
+                      <div>
+                        <h4 className="font-semibold text-sm mb-3">Konsep Kunci:</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {material.key_concepts.map((concept, j) => (
+                            <span
+                              key={j}
+                              className="badge bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 border-0 text-xs py-1 px-3"
+                            >
+                              {concept}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </>
               ) : (
                 <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-12 text-center">
                   <BookOpen className="w-12 h-12 text-slate-400 mx-auto mb-4" />
-                  <p className="text-slate-600 dark:text-slate-400">
+                  <p className="text-slate-600 dark:text-slate-400 mb-4">
                     Materi pembelajaran belum tersedia
                   </p>
+                  {/* Check if PDF exists anyway */}
+                  <a
+                    href={`/${courseId}_materi.pdf`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
+                  >
+                    <FileText className="w-4 h-4" />
+                    Coba buka PDF
+                  </a>
                 </div>
               )}
+            </div>
+          )}
+
+          {activeTab === "practice" && (
+            <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-8">
+              <div className="text-center mb-8">
+                <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="w-8 h-8 text-purple-600 dark:text-purple-400" />
+                </div>
+                <h2 className="text-2xl font-bold mb-2">Latihan Soal</h2>
+                <p className="text-slate-600 dark:text-slate-400">
+                  Kerjakan latihan untuk menguji pemahaman Anda
+                </p>
+              </div>
+
+              {/* PDF with practice problems */}
+              <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 text-white mb-6">
+                <h3 className="text-xl font-bold mb-2">📝 Soal Latihan Lengkap</h3>
+                <p className="text-purple-100 mb-4">
+                  Latihan soal level mudah, sedang, dan sulit tersedia dalam materi PDF
+                </p>
+                <a
+                  href={`/${courseId}_materi.pdf`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition"
+                >
+                  <FileText className="w-5 h-5" />
+                  Lihat Semua Latihan
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
+
+              {/* Coming soon features */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="border border-slate-200 dark:border-slate-700 rounded-lg p-6">
+                  <h4 className="font-bold mb-2">🎯 Level Mudah</h4>
+                  <p className="text-sm text-slate-600 dark:text-slate-400">
+                    Soal dasar untuk memahami konsep fundamental
+                  </p>
+                </div>
+                <div className="border border-slate-200 dark:border-slate-700 rounded-lg p-6">
+                  <h4 className="font-bold mb-2">⚡ Level Sedang</h4>
+                  <p className="text-sm text-slate-600 dark:text-slate-400">
+                    Soal aplikasi konsep dalam konteks nyata
+                  </p>
+                </div>
+                <div className="border border-slate-200 dark:border-slate-700 rounded-lg p-6">
+                  <h4 className="font-bold mb-2">🔥 Level Sulit</h4>
+                  <p className="text-sm text-slate-600 dark:text-slate-400">
+                    Soal kompleks untuk menguji pemahaman mendalam
+                  </p>
+                </div>
+                <div className="border border-slate-200 dark:border-slate-700 rounded-lg p-6">
+                  <h4 className="font-bold mb-2">✅ Auto-Grading</h4>
+                  <p className="text-sm text-slate-600 dark:text-slate-400">
+                    Sistem penilaian otomatis (coming soon)
+                  </p>
+                </div>
+              </div>
             </div>
           )}
 
