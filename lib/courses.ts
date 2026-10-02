@@ -7,6 +7,11 @@ export interface LearningMaterial {
   key_concepts: string[];
 }
 
+export interface YouTubePlaylist {
+  title: string;
+  url: string;
+}
+
 export interface Course {
   id: string;
   code: string;
@@ -15,11 +20,11 @@ export interface Course {
   day: string;
   time: string;
   lecturer: string;
-  room?: string;
-  rps_url?: string;
-  description?: string;
-  topics?: string[];
-  youtube_playlists?: { title: string; url: string }[];
+  room: string;
+  rps_url?: string | null;
+  description: string;
+  topics: string[];
+  youtube_playlists: YouTubePlaylist[];
   learning_materials?: LearningMaterial[];
 }
 
