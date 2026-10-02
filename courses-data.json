@@ -43,36 +43,140 @@
       "learning_materials": [
         {
           "week": 1,
-          "title": "Pengenalan Algoritma",
-          "summary": "Algoritma adalah langkah-langkah terstruktur untuk menyelesaikan masalah. Flowchart adalah representasi visual algoritma.",
+          "title": "Pengenalan Algoritma & Flowchart",
+          "summary": "Algoritma adalah langkah-langkah terstruktur dan logis untuk menyelesaikan suatu masalah. Dalam pemrograman, algoritma menjadi fondasi sebelum menulis kode. Flowchart adalah representasi visual algoritma menggunakan simbol-simbol standar seperti oval (start/end), persegi panjang (proses), belah ketupat (keputusan), dan panah (arah alur). Mahasiswa akan mempelajari cara menyusun algoritma sederhana dalam bentuk pseudocode dan menggambarkannya sebagai flowchart. Contoh praktis: algoritma menghitung luas persegi panjang, menentukan bilangan ganjil/genap, dan menukar nilai dua variabel.",
           "key_concepts": [
             "Definisi algoritma",
-            "Notasi algoritma (pseudocode)",
-            "Flowchart simbol dasar",
-            "Input-Process-Output"
+            "Karakteristik algoritma (input, output, definiteness, finiteness, effectiveness)",
+            "Pseudocode",
+            "Simbol flowchart (terminator, process, decision, input/output)",
+            "Flow direction dan connector"
           ]
         },
         {
           "week": 2,
-          "title": "Variabel & Tipe Data",
-          "summary": "Variabel adalah tempat menyimpan data dalam program. Python mendukung tipe data: int, float, string, boolean, list.",
+          "title": "Variabel, Tipe Data, dan Operator",
+          "summary": "Variabel adalah nama simbolis yang merujuk ke lokasi memori untuk menyimpan data. Python merupakan bahasa dynamically-typed, artinya tipe data ditentukan saat runtime. Tipe data dasar meliputi: int (bilangan bulat), float (bilangan desimal), str (teks), bool (True/False), dan list (kumpulan data). Operator meliputi aritmatika (+, -, *, /, //, %, **), perbandingan (==, !=, <, >, <=, >=), logika (and, or, not), dan assignment (=, +=, -=). Mahasiswa akan mempraktikkan deklarasi variabel, konversi tipe data, dan operasi sederhana melalui program kalkulator dan manipulasi string.",
           "key_concepts": [
-            "Deklarasi variabel",
-            "Tipe data primitif",
-            "Type casting",
-            "Operator aritmatika"
+            "Deklarasi dan inisialisasi variabel",
+            "Tipe data primitif (int, float, str, bool)",
+            "Tipe data koleksi (list, tuple, dict)",
+            "Operator aritmatika, perbandingan, logika",
+            "Type casting (int(), float(), str())",
+            "Input dari user (input()) dan output (print())"
           ]
         },
         {
           "week": 3,
-          "title": "Percabangan (Conditional)",
-          "summary": "Struktur kontrol untuk mengambil keputusan berdasarkan kondisi tertentu.",
+          "title": "Struktur Percabangan (Conditional Statements)",
+          "summary": "Percabangan memungkinkan program mengambil keputusan berdasarkan kondisi tertentu. Struktur if mengeksekusi blok kode jika kondisi bernilai True. Struktur if-else menyediakan dua jalur: satu untuk kondisi True dan satu untuk False. elif (else if) digunakan untuk mengevaluasi multiple conditions secara berurutan. Nested if adalah if di dalam if untuk keputusan yang lebih kompleks. Operator perbandingan dan logika digunakan untuk membangun kondisi. Contoh aplikasi: program menentukan grade nilai, kalkulator BMI dengan kategori berat badan, dan validasi login sederhana.",
           "key_concepts": [
             "if statement",
-            "if-else",
-            "elif (else if)",
+            "if-else statement",
+            "elif untuk multiple conditions",
             "Nested if",
-            "Operator perbandingan & logika"
+            "Operator perbandingan",
+            "Operator logika (and, or, not)",
+            "Truthy dan falsy values di Python"
+          ]
+        },
+        {
+          "week": 4,
+          "title": "Struktur Perulangan (Looping)",
+          "summary": "Perulangan memungkinkan eksekusi blok kode berulang kali tanpa menulis kode berulang. For loop digunakan untuk iterasi pada sequence dengan jumlah iterasi yang sudah diketahui. While loop berjalan selama kondisi bernilai True, cocok untuk iterasi dengan kondisi berhenti yang dinamis. break digunakan untuk menghentikan loop secara paksa, continue untuk melewati iterasi saat ini. Nested loop digunakan untuk pola-pola 2D seperti segitiga bintang dan tabel perkalian. Contoh aplikasi: menghitung faktorial, menampilkan deret Fibonacci, dan validasi input pengguna.",
+          "key_concepts": [
+            "for loop dengan range()",
+            "for loop dengan list/string",
+            "while loop",
+            "break dan continue",
+            "Nested loops",
+            "Loop dengan kondisi kompleks",
+            "Infinite loop dan cara menghindarinya"
+          ]
+        },
+        {
+          "week": 5,
+          "title": "Array dan Matriks",
+          "summary": "Array adalah struktur data yang menyimpan kumpulan elemen dengan tipe data sama dalam satu variabel. Di Python, list berfungsi sebagai array dinamis. List memiliki indeks dimulai dari 0, mendukung slicing, dan berbagai metode seperti append(), remove(), sort(), reverse(). Matriks adalah array dua dimensi (list of lists) yang merepresentasikan data dalam bentuk baris dan kolom. Operasi matriks dasar: penjumlahan, pengurangan, perkalian skalar, dan transpose. Contoh aplikasi: menyimpan data nilai mahasiswa, representasi peta, dan perhitungan statistik sederhana.",
+          "key_concepts": [
+            "List sebagai array",
+            "Indeks dan slicing",
+            "Metode list (append, insert, remove, pop, sort)",
+            "List comprehension",
+            "Matriks (list of lists)",
+            "Operasi matriks dasar",
+            "Traversing 2D array dengan nested loop"
+          ]
+        },
+        {
+          "week": 6,
+          "title": "Fungsi dan Prosedur",
+          "summary": "Fungsi adalah blok kode terorganisir yang dapat digunakan kembali untuk menyelesaikan tugas tertentu. Fungsi menerima input, memprosesnya, dan mengembalikan output. Prosedur adalah fungsi yang tidak mengembalikan nilai. Konsep modular programming memecah program besar menjadi fungsi-fungsi kecil. Scope variabel menentukan di mana variabel dapat diakses. Rekursi adalah teknik fungsi yang memanggil dirinya sendiri dengan base case. Contoh: fungsi menghitung luas bangun datar, konversi suhu, dan rekursi untuk faktorial.",
+          "key_concepts": [
+            "Definisi dan pemanggilan fungsi",
+            "Parameter dan argument",
+            "Return value",
+            "Default parameter",
+            "Local scope vs global scope",
+            "Rekursi dan base case",
+            "Modular programming",
+            "Lambda functions"
+          ]
+        },
+        {
+          "week": 7,
+          "title": "Teknik Pengurutan (Sorting)",
+          "summary": "Sorting adalah proses mengurutkan elemen dalam array secara ascending atau descending. Bubble Sort membandingkan dan menukar elemen bersebelahan. Selection Sort mencari elemen terkecil dan menukarnya. Insertion Sort membangun array terurut secara bertahap. Setiap algoritma memiliki kompleksitas berbeda diukur dengan Big-O notation. Mahasiswa mengimplementasikan ketiga algoritma, membandingkan jumlah operasi, dan memahami kapan menggunakan masing-masing.",
+          "key_concepts": [
+            "Bubble Sort (O(n^2))",
+            "Selection Sort (O(n^2))",
+            "Insertion Sort (O(n^2))",
+            "Time complexity dan space complexity",
+            "Big-O notation",
+            "Stable vs unstable sorting",
+            "In-place sorting"
+          ]
+        },
+        {
+          "week": 8,
+          "title": "Teknik Pencarian (Searching)",
+          "summary": "Searching adalah proses menemukan posisi elemen tertentu dalam kumpulan data. Linear Search memeriksa setiap elemen satu per satu dengan kompleksitas O(n). Binary Search bekerja pada array yang sudah terurut dengan kompleksitas O(log n) dengan membagi array menjadi dua bagian. Prasyarat Binary Search adalah data harus terurut. Mahasiswa mempelajari implementasi kedua algoritma dan membandingkan performa keduanya.",
+          "key_concepts": [
+            "Linear Search / Sequential Search",
+            "Binary Search (divide and conquer)",
+            "Prasyarat Binary Search (data terurut)",
+            "Time complexity: O(n) vs O(log n)",
+            "Iterative vs recursive Binary Search",
+            "Best case, average case, worst case"
+          ]
+        },
+        {
+          "week": 9,
+          "title": "Manipulasi String",
+          "summary": "String adalah sequence of characters yang sangat penting dalam pemrosesan teks. Python menyediakan banyak metode: upper(), lower(), strip(), split(), join(), replace(), find(), count(), startswith(), endswith(). String slicing memungkinkan ekstraksi substring dengan notasi [start:stop:step]. f-string untuk menyisipkan variabel ke dalam teks. Regular Expression (regex) dengan modul re menyediakan pola pencarian yang powerful untuk validasi dan ekstraksi data. Contoh: validasi format email dan nomor telepon, parsing data CSV, pembersihan data teks.",
+          "key_concepts": [
+            "String indexing dan slicing",
+            "Metode string (upper, lower, strip, split, join, replace)",
+            "String formatting (f-string, format(), %)",
+            "String immutability",
+            "Escape characters",
+            "Regular Expression dasar",
+            "String comparison"
+          ]
+        },
+        {
+          "week": 10,
+          "title": "File Handling",
+          "summary": "File handling memungkinkan program membaca dari dan menulis ke file eksternal untuk penyimpanan data persisten. Python menggunakan open() dengan mode: r (read), w (write), a (append), r+ (read+write), b (binary). File teks dapat diproses baris per baris menggunakan loop. CSV dan JSON adalah format standar untuk data tabular dan pertukaran data. Best practice: selalu menutup file setelah digunakan (dengan statement with untuk auto-close), menangani exception, dan memahami encoding. Contoh: membaca data mahasiswa dari file, menyimpan hasil perhitungan ke file baru.",
+          "key_concepts": [
+            "open() dan mode file (r, w, a, r+, b)",
+            "Reading file (read(), readline(), readlines())",
+            "Writing dan appending file",
+            "with statement (context manager)",
+            "CSV file dengan modul csv",
+            "JSON file dengan modul json",
+            "Exception handling untuk file",
+            "File path (absolute vs relative)"
           ]
         }
       ],
@@ -475,6 +579,115 @@
           "correct": 1,
           "explanation": "SyntaxError saat penulisan kode tidak sesuai aturan."
         }
+      ],
+      "learning_materials": [
+        {
+          "week": 1,
+          "title": "Setup Environment Python",
+          "summary": "Praktikum dimulai dengan setup lingkungan pengembangan Python. Mahasiswa akan mengunduh dan menginstal Python dari python.org. IDE yang umum digunakan adalah VS Code atau PyCharm. Verifikasi instalasi menggunakan python --version dan pip --version. Membuat file hello.py dan menjalankannya dengan python hello.py. Virtual environment untuk isolasi project. Pip package manager untuk menginstal library tambahan.",
+          "key_concepts": [
+            "Instalasi Python 3.x",
+            "IDE pilihan (VS Code, PyCharm)",
+            "pip package manager",
+            "Virtual environment (venv)",
+            "Menjalankan file .py",
+            "REPL",
+            "Debugging sederhana"
+          ]
+        },
+        {
+          "week": 2,
+          "title": "Program Hello World & I/O Dasar",
+          "summary": "Praktikum pertama coding: membuat program Hello World dengan print(). Input dari user menggunakan input() dan menampilkan kembali. Menggabungkan input-output, operasi matematika, dan string formatting. Contoh: program menyapa user dengan nama, kalkulator sederhana untuk dua angka, konversi suhu. Melatih pemahaman variabel, tipe data, dan operasi dasar.",
+          "key_concepts": [
+            "print() untuk output",
+            "input() untuk user input",
+            "Tipe data int, float, str",
+            "Konversi tipe",
+            "f-string formatting",
+            "Kalkulator sederhana",
+            "String concatenation"
+          ]
+        },
+        {
+          "week": 3,
+          "title": "Kalkulator Sederhana (Operator & If-Else)",
+          "summary": "Praktikum membangun kalkulator yang melakukan operasi aritmatika dasar berdasarkan pilihan user. Struktur if-elif-else untuk menentukan operasi. Validasi input untuk mencegah division by zero dan input non-numerik. Menu interaktif menggunakan loop agar dapat digunakan berulang kali. Mengintegrasikan variabel, input-output, operator, percabangan, dan perulangan.",
+          "key_concepts": [
+            "Implementasi if-elif-else",
+            "Nested conditional",
+            "Validasi input",
+            "Loop while untuk menu interaktif",
+            "Operator aritmatika",
+            "Error handling dasar",
+            "Aplikasi menu-driven"
+          ]
+        },
+        {
+          "week": 4,
+          "title": "Menentukan Bilangan Ganjil/Genap",
+          "summary": "Praktikum membuat program untuk menentukan bilangan ganjil atau genap menggunakan operator modulus. Bilangan genap habis dibagi 2 (sisa bagi = 0). Validasi input. Pengembangan: menentukan apakah bilangan kelipatan 5, 11, atau bilangan prima. Melatih logika matematika, penggunaan if-else, dan pemahaman operator modulus.",
+          "key_concepts": [
+            "Operator modulus (%)",
+            "If-else sederhana",
+            "Input validation",
+            "Bilangan genap vs ganjil",
+            "Bilangan kelipatan",
+            "Logika aritmatika dalam program"
+          ]
+        },
+        {
+          "week": 5,
+          "title": "Deret Fibonacci",
+          "summary": "Praktikum mengimplementasikan deret Fibonacci (0, 1, 1, 2, 3, 5, 8, 13, ...). Dua pendekatan: iteratif (loop) dan rekursif. Versi iteratif lebih efisien, rekursif lebih elegan. Membandingkan dua pendekatan dan memahami kompleksitasnya. Melatih pemahungan loop, function, rekursi, dan trade-off antara keterbacaan vs performa.",
+          "key_concepts": [
+            "Deret Fibonacci",
+            "Implementasi iteratif dengan loop",
+            "Implementasi rekursif",
+            "Base case pada rekursi",
+            "Perbandingan performa",
+            "Function dengan return value"
+          ]
+        },
+        {
+          "week": 6,
+          "title": "Menghitung Rata-rata dan Statistik",
+          "summary": "Praktikum menerima sekumpulan angka, menyimpannya dalam list, dan menghitung statistik dasar: rata-rata, maksimum, minimum. Menggunakan loop untuk input berulang, list untuk menyimpan data, dan fungsi built-in sum(), len(), max(), min(). Aplikasi: sistem penilaian sederhana, analisis data kelas, olah data numerik.",
+          "key_concepts": [
+            "List untuk menyimpan banyak data",
+            "Loop untuk input berulang",
+            "Fungsi built-in (sum, len, max, min)",
+            "Menghitung rata-rata",
+            "Sort list untuk median",
+            "Statistik dasar"
+          ]
+        },
+        {
+          "week": 7,
+          "title": "Sorting Array (Bubble Sort)",
+          "summary": "Praktikum mengimplementasikan Bubble Sort untuk mengurutkan array. Konsep: bandingkan elemen bersebelahan, tukar jika urutan salah, ulang hingga terurut. Menampilkan proses sorting step-by-step. Pengembangan: opsi descending, jumlah perbandingan. Melatih pemahaman array, nested loop, dan algoritma sorting.",
+          "key_concepts": [
+            "Implementasi Bubble Sort",
+            "Nested loop",
+            "Swap dua variabel",
+            "Step-by-step display",
+            "Ascending vs descending",
+            "Hitung jumlah operasi"
+          ]
+        },
+        {
+          "week": 8,
+          "title": "Membaca & Menulis File",
+          "summary": "Praktikum membuat program membaca dari file teks dan menulis output ke file. Contoh: membaca daftar nama, memprosesnya, menyimpan ke file baru. Memahami mode file (r, w, a), with statement, exception handling untuk FileNotFoundError. Aplikasi: data processing dan logging.",
+          "key_concepts": [
+            "open() mode (r, w, a)",
+            "with statement",
+            "read(), readline(), readlines()",
+            "write()",
+            "Exception handling",
+            "File path"
+          ]
+        }
       ]
     },
     {
@@ -512,23 +725,122 @@
         {
           "week": 1,
           "title": "Logika Matematika",
-          "summary": "Studi tentang penalaran matematis. Proposisi adalah pernyataan yang bernilai benar atau salah.",
+          "summary": "Studi tentang penalaran matematis dan validitas argumen. Proposisi adalah pernyataan yang bernilai benar atau salah. Operator logika: AND (konjungsi), OR (disjungsi), NOT (negasi), XOR, implikasi. Tabel kebenaran mengevaluasi kombinasi proposisi. Tautologi (selalu True), kontradiksi (selalu False), kontingensi. Aplikasi: boolean expression dalam if-else, query database, circuit design.",
           "key_concepts": [
-            "Proposisi & nilai kebenaran",
+            "Proposisi dan nilai kebenaran",
             "Operator logika (AND, OR, NOT, XOR)",
             "Tabel kebenaran",
-            "Implikasi & ekuivalensi"
+            "Implikasi dan bi-implikasi",
+            "Tautologi, kontradiksi",
+            "Ekuivalensi logika",
+            "Hukum De Morgan"
           ]
         },
         {
           "week": 2,
           "title": "Himpunan (Set Theory)",
-          "summary": "Kumpulan objek yang didefinisikan dengan jelas. Fundamental dalam database dan pemrograman.",
+          "summary": "Kumpulan objek yang didefinisikan dengan jelas. Operasi himpunan: union (gabungan), intersection (elemen bersama), complement (elemen di universe tapi bukan di himpunan), difference. Subset dan himpunan kuasa (power set). Diagram Venn untuk visualisasi relasi antar himpunan. Aplikasi: class hierarchy di OOP, database filtering, permission systems.",
           "key_concepts": [
             "Notasi himpunan",
-            "Operasi: union, intersection, complement",
-            "Himpunan kuasa (Power set)",
-            "Diagram Venn"
+            "Elemen dan keanggotaan",
+            "Subset dan proper subset",
+            "Operasi: union, intersection, complement, difference",
+            "Himpunan kuasa",
+            "Diagram Venn",
+            "Hukum-hukum himpunan"
+          ]
+        },
+        {
+          "week": 3,
+          "title": "Relasi",
+          "summary": "Relasi adalah hubungan antara elemen dari satu himpunan ke himpunan lain. Dinyatakan sebagai pasangan terurut. Properti: refleksif, simetris, transitif, antisimetris. Relasi ekuivalensi memenuhi refleksif, simetris, transitif. Partisi dan kelas ekuivalensi. Digraf representasi. Aplikasi: database relationships, social networks, dependency injection.",
+          "key_concepts": [
+            "Definisi relasi",
+            "Pasangan terurut",
+            "Properti relasi (refleksif, simetris, transitif, antisimetris)",
+            "Relasi ekuivalensi",
+            "Partisi dan kelas ekuivalensi",
+            "Digraf representasi",
+            "Relasi invers"
+          ]
+        },
+        {
+          "week": 4,
+          "title": "Fungsi",
+          "summary": "Fungsi adalah relasi khusus: setiap input dipetakan tepat satu output. Notasi f: A -> B. Tipe fungsi: injektif (one-to-one), surjektif (onto), bijektif. Fungsi invers hanya ada untuk bijektif. Komposisi fungsi (f o g). Aplikasi: mapping data structure, transformasi koordinat, hash functions.",
+          "key_concepts": [
+            "Domain, codomain, range",
+            "Fungsi well-defined",
+            "Fungsi injektif, surjektif, bijektif",
+            "Invers fungsi",
+            "Komposisi fungsi"
+          ]
+        },
+        {
+          "week": 5,
+          "title": "Induksi Matematika",
+          "summary": "Teknik pembuktian untuk proposisi pada bilangan asli. Dua langkah: (1) basis (buktikan untuk n=1), (2) langkah induksi (asumsikan benar untuk n=k, buktikan untuk n=k+1). Prinsip: jika basis dan step benar, proposisi benar untuk semua bilangan asli. Aplikasi: membuktikan rumus deret, ketidaksamaan, sifat algoritma.",
+          "key_concepts": [
+            "Prinsip induksi matematika",
+            "Basis induksi",
+            "Langkah induksi",
+            "Hipotesis induksi",
+            "Induksi kuat",
+            "Aplikasi pada deret",
+            "Pembuktian sifat algoritma"
+          ]
+        },
+        {
+          "week": 6,
+          "title": "Rekursi dan Rekurensi",
+          "summary": "Rekursi adalah definisi self-referential. Relasi rekurensi mendefinisikan term sebagai fungsi dari term sebelumnya. Contoh: Fibonacci, faktorial. Base case menghentikan rekursi. Solusi dengan substitusi iteratif, persamaan karakteristik. Aplikasi: divide-and-conquer algorithms, tree traversal, parsing.",
+          "key_concepts": [
+            "Definisi rekurensi",
+            "Base case dan recursive case",
+            "Relasi rekurensi linier",
+            "Substitusi iteratif",
+            "Persamaan karakteristik",
+            "Divide and conquer"
+          ]
+        },
+        {
+          "week": 7,
+          "title": "Kombinatorik (Permutasi dan Kombinasi)",
+          "summary": "Ilmu menghitung kemungkinan pengaturan atau pemilihan elemen. Permutasi (urutan penting): P(n,r) = n!/(n-r)!. Kombinasi (urutan tidak penting): C(n,r) = n!/(r!(n-r)!). Prinsip dasar: multiplication principle, addition principle, inclusion-exclusion. Aplikasi: probabilitas, pengaturan jadwal, password cracking.",
+          "key_concepts": [
+            "Faktorial dan notasi",
+            "Permutasi P(n,r)",
+            "Kombinasi C(n,r)",
+            "Prinsip perkalian dan penjumlahan",
+            "Inclusion-exclusion",
+            "Pigeonhole principle"
+          ]
+        },
+        {
+          "week": 8,
+          "title": "Graf dan Pohon",
+          "summary": "Graf terdiri dari vertex dan edge merepresentasikan relasi. Directed/undirected, weighted/unweighted. Pohon: terhubung, asiklik, satu root. Traversal (BFS, DFS), spanning tree, shortest path. Aplikasi: social network, file system, routing, dependency management.",
+          "key_concepts": [
+            "Vertex, edge, degree",
+            "Graf directed vs undirected",
+            "Adjacency matrix dan list",
+            "Traversal (BFS, DFS)",
+            "Pohon dan binary tree",
+            "Spanning tree",
+            "Cycle dan connected component"
+          ]
+        },
+        {
+          "week": 9,
+          "title": "Aljabar Boolean",
+          "summary": "Sistem aljabar dengan nilai 0 dan 1. Operasi AND, OR, NOT. Hukum: commutative, associative, distributive, De Morgan, idempotent. Ekspresi boolean untuk simplifikasi sistematis. Karnaugh map untuk simplifikasi. Aplikasi: design circuit, optimisasi condition, database query.",
+          "key_concepts": [
+            "Operasi Boolean",
+            "Hukum-hukum Boolean",
+            "DNF dan CNF",
+            "Karnaugh map",
+            "Simplifikasi ekspresi",
+            "Boolean function"
           ]
         }
       ],
@@ -928,6 +1240,119 @@
           "correct": 0,
           "explanation": "det = (2×4) - (1×3) = 8 - 3 = 5."
         }
+      ],
+      "learning_materials": [
+        {
+          "week": 1,
+          "title": "Bilangan Real & Sistem Bilangan",
+          "summary": "Bilangan real mencakup rasional (p/q) dan irasional (π, √2). Sifat: closure, associativity, distributivity. Sistem bilangan: binary (basis 2), oktal (basis 8), heksadesimal (basis 16). Konversi antar basis penting untuk pemrograman. Garis bilangan real visualisasi urutan. Aplikasi: presisi floating point, perkiraan error, representasi data.",
+          "key_concepts": [
+            "Bilangan rasional dan irasional",
+            "Sifat-sifat operasi bilangan",
+            "Konversi basis",
+            "Garis bilangan",
+            "Interval dan notasi",
+            "Aproksimasi dan pembulatan"
+          ]
+        },
+        {
+          "week": 2,
+          "title": "Persamaan & Pertidaksamaan Linear",
+          "summary": "Persamaan linear ax + b = c, solusi nilai x yang memenuhi. Sistem persamaan: substitusi, eliminasi, matriks. Pertidaksamaan linear: ax + b < c. Penting: saat kalikan dengan negatif, tanda dibalik. Aplikasi: linear programming, breakeven analysis, routing.",
+          "key_concepts": [
+            "Persamaan linear satu variabel",
+            "Sistem persamaan linear 2 dan 3 variabel",
+            "Metode substitusi, eliminasi",
+            "Pertidaksamaan linear",
+            "Interval solusi",
+            "Grafik garis",
+            "Aplikasi linear programming"
+          ]
+        },
+        {
+          "week": 3,
+          "title": "Fungsi (Domain, Range, Komposisi)",
+          "summary": "Fungsi f(x) = y adalah relasi khusus. Domain adalah input valid, range adalah output yang dihasilkan. Fungsi linear, kuadrat, polynomial. Transformasi grafik. Komposisi fungsi (f o g)(x) = f(g(x)). Invers fungsi membalik mapping. Aplikasi: modeling fenomena alam, ekonomi, optimisasi.",
+          "key_concepts": [
+            "Domain dan range",
+            "Notasi fungsi f(x)",
+            "Fungsi linear, kuadrat, polynomial",
+            "Transformasi grafik",
+            "Komposisi fungsi",
+            "Invers fungsi",
+            "Aplikasi modeling"
+          ]
+        },
+        {
+          "week": 4,
+          "title": "Limit Fungsi",
+          "summary": "Limit menjelaskan perilaku fungsi ketika input mendekati nilai tertentu. Notasi: lim(x→a) f(x) = L. Sifat limit: sum, difference, product, quotient. Teknik evaluasi: direct substitution, factoring, rationalization. Limit tak terhingga. Kontinuitas fungsi: f kontinyu di x=a jika lim = f(a).",
+          "key_concepts": [
+            "Definisi limit informal",
+            "Limit kiri dan kanan",
+            "Sifat-sifat limit",
+            "Bentuk indeterminate",
+            "Teknik evaluasi limit",
+            "Limit di tak terhingga",
+            "Kontinuitas fungsi"
+          ]
+        },
+        {
+          "week": 5,
+          "title": "Turunan (Derivative)",
+          "summary": "Turunan f'(x) mengukur laju perubahan fungsi. Definisi: f'(x) = lim(h→0) [f(x+h)-f(x)]/h. Aturan: power rule, product rule, quotient rule, chain rule. Turunan fungsi trigonometri, exponential, logarithmic. Aplikasi: optimisasi (f'(x)=0), fisika (velocity, acceleration), ekonomi (marginal cost).",
+          "key_concepts": [
+            "Definisi turunan",
+            "Power rule, product rule, quotient rule, chain rule",
+            "Turunan fungsi trigonometri, exponential",
+            "Optimisasi max/min",
+            "Turunan kedua untuk concavity",
+            "Aplikasi fisika dan ekonomi"
+          ]
+        },
+        {
+          "week": 6,
+          "title": "Integral (Tak Tentu & Tentu)",
+          "summary": "Integral adalah kebalikan turunan. Integral tak tentu ∫f(x)dx = F(x) + C. Aturan power rule, linearity. Integral tentu ∫[a,b] f(x)dx menghitung area. Teorema fundamental kalkulus: ∫[a,b] f(x)dx = F(b) - F(a). Teknik: substitusi u, integration by parts, partial fractions.",
+          "key_concepts": [
+            "Integral tak tentu (antiderivative)",
+            "Konstanta integrasi C",
+            "Aturan power, sum, scalar",
+            "Integral tentu dan Riemann sum",
+            "Teorema fundamental kalkulus",
+            "Teknik substitusi",
+            "Aplikasi area dan volume"
+          ]
+        },
+        {
+          "week": 7,
+          "title": "Matriks & Operasinya",
+          "summary": "Matriks adalah array elemen (baris × kolom). Operasi: penjumlahan, pengurangan, perkalian skalar, perkalian matriks. Determinant dan inverse (hanya jika det≠0). Transpose menukar baris dan kolom. Jenis khusus: identity matrix, symmetric. Aplikasi: sistem linear (Ax=b), komputer grafis, network analysis.",
+          "key_concepts": [
+            "Dimensi matriks",
+            "Operasi matriks",
+            "Transpose dan properties",
+            "Trace dan determinant",
+            "Invers matriks",
+            "Sistem linear dengan matriks",
+            "Special matrices"
+          ]
+        },
+        {
+          "week": 8,
+          "title": "Vektor",
+          "summary": "Vektor adalah quantity dengan magnitude dan direction. Operasi: penjumlahan, scalar multiplication. Dot product u·v = |u||v|cos(θ) mengukur similarity. Cross product (3D) menghasilkan vektor orthogonal. Magnitude |v| = √(v1²+v2²+...). Unit vector magnitude 1. Proyeksi. Aplikasi: fisika (force, velocity), graphics, machine learning.",
+          "key_concepts": [
+            "Representasi vektor",
+            "Magnitude dan direction",
+            "Operasi vektor",
+            "Dot product dan perpendicularity",
+            "Cross product",
+            "Unit vector",
+            "Proyeksi",
+            "Aplikasi fisika dan graphics"
+          ]
+        }
       ]
     },
     {
@@ -1141,6 +1566,122 @@
           ],
           "correct": 1,
           "explanation": "p = m·v."
+        }
+      ],
+      "learning_materials": [
+        {
+          "week": 1,
+          "title": "Besaran, Satuan, & Dimensi",
+          "summary": "Besaran adalah sesuatu yang dapat diukur. Besaran pokok: panjang (m), massa (kg), waktu (s). Besaran turunan: kecepatan (m/s), gaya (N). Satuan SI standar global. Dimensi mengekspresikan besaran dalam bentuk pokok [L], [M], [T]. Analisis dimensi memverifikasi kebenaran persamaan. Konversi satuan (km ke m, cm^3 ke m^3). Ketepatan dan presisi.",
+          "key_concepts": [
+            "Besaran pokok dan turunan",
+            "Satuan SI",
+            "Kelipatan dan orde besar",
+            "Analisis dimensi",
+            "Konversi satuan",
+            "Significant figures"
+          ]
+        },
+        {
+          "week": 2,
+          "title": "Kinematika (Gerak Lurus)",
+          "summary": "Kinematika mempelajari gerak tanpa penyebabnya. GLB: kecepatan konstan s = v*t. GLBB: akselerasi konstan v = v0 + at, s = v0*t + 0.5*a*t². Grafik posisi vs waktu dan kecepatan vs waktu. Jatuh bebas g ≈ 10 m/s². Aplikasi: analisis lintasan peluru, rem kendaraan.",
+          "key_concepts": [
+            "Posisi, perpindahan, jarak",
+            "Kecepatan rata-rata dan sesaat",
+            "Akselerasi",
+            "Persamaan kinematika GLB dan GLBB",
+            "Grafik kinematika",
+            "Jatuh bebas",
+            "Peluru"
+          ]
+        },
+        {
+          "week": 3,
+          "title": "Dinamika (Hukum Newton)",
+          "summary": "Dinamika mempelajari relasi gaya dan gerak. Hukum Newton I: benda diam tetap diam jika tidak ada gaya net. Hukum II: F_net = m*a. Hukum III: F_aksi = -F_reaksi. Gaya: gravitasi (W = mg), normal, gesekan (f = μ*N), tension. Diagram benda bebas (FBD).",
+          "key_concepts": [
+            "Hukum Newton I, II, III",
+            "Gaya dan vektor gaya",
+            "Gaya gravitasi",
+            "Gaya normal",
+            "Gaya gesekan",
+            "Gaya tension",
+            "Diagram benda bebas",
+            "Sistem multi-benda"
+          ]
+        },
+        {
+          "week": 4,
+          "title": "Usaha & Energi",
+          "summary": "Usaha W = F*d*cos(θ) adalah produk gaya dan perpindahan. Energi kinetik KE = 0.5*m*v². Energi potensial PE = m*g*h. Konservasi energi: energi total tetap jika tidak ada gaya non-konservatif. Daya P = W/t. Teorema usaha-energi: W_net = ΔKE.",
+          "key_concepts": [
+            "Definisi usaha",
+            "Energi kinetik dan potensial",
+            "Konservasi energi mekanik",
+            "Gaya konservatif vs non-konservatif",
+            "Daya",
+            "Efficiency",
+            "Aplikasi sistem mekanik"
+          ]
+        },
+        {
+          "week": 5,
+          "title": "Momentum & Impuls",
+          "summary": "Momentum p = m*v. Impuls J = F*Δt mengubah momentum: J = Δp. Konservasi momentum: momentum total konstan jika tidak ada gaya eksternal. Tumbukan elastic mempertahankan KE, inelastic tidak. Aplikasi: tabrakan mobil, ledakan, rocket propulsion.",
+          "key_concepts": [
+            "Momentum p = mv",
+            "Impuls J = F*Δt",
+            "Hubungan impuls-momentum",
+            "Konservasi momentum",
+            "Tumbukan elastic vs inelastic",
+            "Koefisien restitusi"
+          ]
+        },
+        {
+          "week": 6,
+          "title": "Struktur Atom & Periodik",
+          "summary": "Atom terdiri dari proton, neutron, elektron. Nomor atom Z = jumlah proton. Isotop atom elemen yang sama tapi berbeda neutron. Konfigurasi elektron berdasarkan Aufbau. Tabel periodik mengatur elemen berdasarkan nomor atom. Tren: electronegativity, ionization energy, atomic radius.",
+          "key_concepts": [
+            "Struktur atom",
+            "Nomor atom dan massa",
+            "Isotop dan isobar",
+            "Konfigurasi elektron",
+            "Orbital (s, p, d, f)",
+            "Tabel periodik",
+            "Tren periodik",
+            "Valence elektron"
+          ]
+        },
+        {
+          "week": 7,
+          "title": "Ikatan Kimia",
+          "summary": "Ikatan kimia menghubungkan atom: ionic (transfer elektron), covalent (sharing elektron), metallic (electron pool). Gaya antar molekul: van der Waals, hydrogen bonding. Electronegativity menentukan polaritas. Struktur Lewis menampilkan ikatan dengan dot. VSEPR theory prediksi geometri molekul.",
+          "key_concepts": [
+            "Ikatan ionic",
+            "Ikatan covalent (polar, non-polar)",
+            "Ikatan metallic",
+            "Gaya van der Waals",
+            "Hydrogen bonding",
+            "Electronegativity",
+            "Lewis structures",
+            "VSEPR theory"
+          ]
+        },
+        {
+          "week": 8,
+          "title": "Reaksi Kimia & Stoikiometri",
+          "summary": "Reaksi kimia: reaktan berubah menjadi produk. Persamaan kimia harus balanced. Stoikiometri: molar ratio untuk hitung jumlah reaktan/produk. Mol (1 mol = 6.022e23), molar mass, molar volume (22.4 L/mol di STP). Limiting reactant menentukan jumlah produk. Tipe reaksi: synthesis, decomposition, combustion, acid-base, redox.",
+          "key_concepts": [
+            "Persamaan kimia balanced",
+            "Mol dan molar mass",
+            "Perhitungan stoikiometri",
+            "Limiting reactant",
+            "Percentage yield",
+            "Tipe-tipe reaksi",
+            "Redox",
+            "Acid-base neutralization"
+          ]
         }
       ]
     },
@@ -1362,6 +1903,157 @@
           "correct": 0,
           "explanation": "Database menyimpan dan mengelola data terstruktur."
         }
+      ],
+      "learning_materials": [
+        {
+          "week": 1,
+          "title": "Sejarah & Generasi Komputer",
+          "summary": "Generasi komputer: 0 (kalkulator mekanik), 1 (vacuum tubes, ENIAC), 2 (transistor), 3 (IC), 4 (microprocessor), 5 (AI dan quantum). Tokoh penting: Charles Babbage (Analytical Engine), Alan Turing (Turing Machine), Von Neumann (stored-program concept). Tren: miniaturisasi, peningkatan kecepatan, parallel processing, energy efficiency.",
+          "key_concepts": [
+            "Sejarah komputer",
+            "Generasi komputer",
+            "Tokoh penting",
+            "Teknologi evolution",
+            "Tren miniaturisasi dan kecepatan",
+            "Perkembangan dari mainframe ke mobile"
+          ]
+        },
+        {
+          "week": 2,
+          "title": "Arsitektur Komputer",
+          "summary": "Komponen utama: CPU (ALU, CU), RAM (volatile, cepat), Storage (HDD, SSD, non-volatile). Von Neumann Architecture: fetch-decode-execute cycle. Bus menghubungkan komponen. Register dan cache mempercepat akses. GPU untuk grafis dan parallel processing. Memahami hardware membantu pengembangan software yang efficient.",
+          "key_concepts": [
+            "CPU (ALU, CU, registers)",
+            "Memory hierarchy",
+            "RAM (DRAM, SRAM)",
+            "Storage (HDD, SSD)",
+            "Von Neumann Architecture",
+            "Fetch-Decode-Execute cycle",
+            "Bus dan bandwidth",
+            "GPU vs CPU"
+          ]
+        },
+        {
+          "week": 3,
+          "title": "Sistem Operasi",
+          "summary": "OS mengelola hardware dan menyediakan interface. Fungsi: resource management, process scheduling, file management, device drivers. Jenis: batch, time-sharing, real-time, embedded. Multitasking, multiuser. Memory management (virtual memory, paging). CLI dan GUI antarmuka.",
+          "key_concepts": [
+            "Fungsi OS",
+            "Jenis OS",
+            "Process dan thread",
+            "Scheduling",
+            "Memory management",
+            "File system",
+            "Device drivers",
+            "User accounts dan permissions"
+          ]
+        },
+        {
+          "week": 4,
+          "title": "Jaringan Komputer & Internet",
+          "summary": "Topologi: bus, star, ring, mesh, tree. Model OSI 7 layer. TCP/IP: IP (addressing), TCP/UDP (transport), DNS (domain to IP), HTTP/SMTP/FTP. Bandwidth, latency, throughput. Keamanan: firewall, VPN, encryption.",
+          "key_concepts": [
+            "Topologi jaringan",
+            "Model OSI 7 layer",
+            "TCP/IP protocol suite",
+            "IP addressing",
+            "DNS dan URL",
+            "Protokol aplikasi",
+            "Routing dan switching",
+            "Firewalls dan security"
+          ]
+        },
+        {
+          "week": 5,
+          "title": "Basis Data",
+          "summary": "Database organized collection of structured data. Relational database: tables dengan rows/columns, foreign keys. SQL standard untuk query. ACID properties (Atomicity, Consistency, Isolation, Durability). Normalization. NoSQL untuk unstructured data besar. Data warehouse untuk analitik.",
+          "key_concepts": [
+            "Relational vs NoSQL",
+            "Table, row, column, key",
+            "Primary key dan foreign key",
+            "SQL queries",
+            "Normalization",
+            "Relationships",
+            "Indexes",
+            "ACID properties"
+          ]
+        },
+        {
+          "week": 6,
+          "title": "Software Engineering & SDLC",
+          "summary": "Software Engineering: merancang, mengembangkan, test, dan maintain software. SDLC: Planning, Analysis, Design, Development, Testing, Deployment, Maintenance. Model: Waterfall (sequential), Agile (iterative), DevOps (continuous integration). Dokumentasi dan version control (Git) penting.",
+          "key_concepts": [
+            "SDLC phases",
+            "Waterfall vs Agile vs DevOps",
+            "Requirements gathering",
+            "Design patterns",
+            "Testing types",
+            "Version control",
+            "Documentation",
+            "Code review"
+          ]
+        },
+        {
+          "week": 7,
+          "title": "Kecerdasan Buatan (AI) & Machine Learning",
+          "summary": "AI membuat mesin intelligent: belajar, reasoning, problem-solving. ML: algoritma learn dari data tanpa diprogram explicit. Supervised learning (classification, regression), unsupervised (clustering), deep learning. Aplikasi: recommendation systems, chatbot, autonomous vehicles. Ethical concerns: bias, transparency.",
+          "key_concepts": [
+            "Supervised vs unsupervised vs reinforcement learning",
+            "Classification dan regression",
+            "Clustering algorithms",
+            "Neural networks dan deep learning",
+            "NLP",
+            "Computer vision",
+            "Training, validation, test sets",
+            "Overfitting dan regularization"
+          ]
+        },
+        {
+          "week": 8,
+          "title": "Keamanan Siber (Cybersecurity)",
+          "summary": "Melindungi sistem dan data dari unauthorized access. Threats: malware, phishing, ransomware, DDoS, injection attacks. Defense: authentication (password, MFA), authorization, encryption, firewall, IDS, regular patching. Best practices: strong passwords, software updates, employee training.",
+          "key_concepts": [
+            "Threats dan vulnerabilities",
+            "Malware, phishing, ransomware",
+            "Authentication dan authorization",
+            "Encryption",
+            "Firewall dan IDS/IPS",
+            "Secure coding practices",
+            "Social engineering awareness",
+            "Incident response"
+          ]
+        },
+        {
+          "week": 9,
+          "title": "Cloud Computing & IoT",
+          "summary": "Cloud Computing: IaaS, PaaS, SaaS. Provider: AWS, Azure, Google Cloud. Manfaat: scalability, flexibility, cost efficiency. IoT: sensors dan devices terhubung ke internet. Edge computing membawa processing dekat source. 5G enabler untuk IoT.",
+          "key_concepts": [
+            "Cloud service models",
+            "Cloud providers",
+            "Virtualization dan containerization",
+            "Serverless computing",
+            "IoT architecture",
+            "Sensors, microcontrollers",
+            "5G technology",
+            "Edge computing"
+          ]
+        },
+        {
+          "week": 10,
+          "title": "Tren Teknologi Masa Depan",
+          "summary": "Tren: Quantum Computing (exponential faster), Blockchain (decentralized ledger), AR/VR/Metaverse, Biotechnology, Renewable Energy. Convergence: AI + IoT, cloud + edge, 5G + autonomous vehicles. Sustainability: green IT. Challenges: ethical implications, digital divide. Lifelong learning mindset.",
+          "key_concepts": [
+            "Quantum computing",
+            "Blockchain",
+            "AR/VR/Metaverse",
+            "Biotechnology",
+            "Renewable energy",
+            "5G dan 6G",
+            "Autonomous systems",
+            "Ethical technology",
+            "Lifelong learning mindset"
+          ]
+        }
       ]
     },
     {
@@ -1569,6 +2261,123 @@
           ],
           "correct": 1,
           "explanation": "Better = comparative dari good."
+        }
+      ],
+      "learning_materials": [
+        {
+          "week": 1,
+          "title": "Introduction to English Grammar",
+          "summary": "Grammar adalah struktur aturan yang mengatur bahasa. Parts of Speech: noun, verb, adjective, adverb, preposition, conjunction, pronoun, interjection. Sentence structure dasar: Subject + Verb + Object (SVO). Melatih mengidentifikasi parts of speech dan membangun kalimat sederhana.",
+          "key_concepts": [
+            "Parts of speech",
+            "Noun",
+            "Verb",
+            "Adjective dan adverb",
+            "Sentence structure (SVO)",
+            "Articles",
+            "Prepositions",
+            "Basic sentence formation"
+          ]
+        },
+        {
+          "week": 2,
+          "title": "Tenses (Present, Past, Future)",
+          "summary": "Tenses menunjukkan waktu suatu tindakan. Present Tense (Simple, Continuous, Perfect), Past Tense, Future Tense. Setiap tense punya formula dan signal words. Mahasiswa berlatih recognize tenses, convert sentences, dan apply dalam writing.",
+          "key_concepts": [
+            "Simple present, past, future",
+            "Continuous/progressive tenses",
+            "Perfect tenses",
+            "Signal words",
+            "Time expressions",
+            "Tense consistency"
+          ]
+        },
+        {
+          "week": 3,
+          "title": "Reading Comprehension",
+          "summary": "Reading comprehension adalah kemampuan memahami, interpret, dan analyze teks tertulis. Strategi: skimming (main idea), scanning (cari informasi spesifik), intensive reading (detail). Question types: literal, inferential, evaluative. Vocabulary in context. Reading comprehension critical untuk academic success.",
+          "key_concepts": [
+            "Skimming dan scanning",
+            "Main idea vs details",
+            "Inference",
+            "Context clues for vocabulary",
+            "Text types",
+            "Author's purpose and tone",
+            "Critical thinking"
+          ]
+        },
+        {
+          "week": 4,
+          "title": "Writing Skills (Paragraphs)",
+          "summary": "Paragraph adalah unit writing dengan satu main idea. Struktur: Topic Sentence, Supporting Sentences, Concluding Sentence. Coherence dengan transition words (however, therefore, moreover). Writing process: brainstorming, outlining, drafting, revising, editing.",
+          "key_concepts": [
+            "Paragraph structure",
+            "Topic sentence",
+            "Unity dan coherence",
+            "Transition words",
+            "Types of paragraphs",
+            "Writing process",
+            "Revising vs editing"
+          ]
+        },
+        {
+          "week": 5,
+          "title": "Vocabulary Building & Word Formation",
+          "summary": "Vocabulary luas meningkatkan communication skills. Word formation: prefix, suffix, compound words. Synonyms, antonyms, homonyms. Collocations. Idioms. Strategi belajar: flashcards, context reading, active usage, spaced repetition.",
+          "key_concepts": [
+            "Prefixes, suffixes, roots",
+            "Compound words",
+            "Synonyms dan antonyms",
+            "Collocations",
+            "Idioms dan phrasal verbs",
+            "Word families",
+            "Context-based learning"
+          ]
+        },
+        {
+          "week": 6,
+          "title": "Listening & Speaking Skills",
+          "summary": "Listening: memahami spoken language. Challenges: speed, accents. Speaking: express ideas orally. Fluency vs accuracy. Pronunciation: sounds, stress, intonation. Conversation skills: turn-taking, asking clarification. Active listening dan speaking practice essential.",
+          "key_concepts": [
+            "Active listening strategies",
+            "Note-taking",
+            "Pronunciation",
+            "Word stress dan sentence stress",
+            "Intonation patterns",
+            "Fluency vs accuracy",
+            "Conversation strategies",
+            "Presentation skills"
+          ]
+        },
+        {
+          "week": 7,
+          "title": "Essay Writing",
+          "summary": "Essay adalah multi-paragraph writing yang membahas satu topic secara mendalam. Structure: Introduction (hook, background, thesis), Body Paragraphs, Conclusion (restate thesis, summary). Thesis statement adalah central argument. Types: expository, argumentative, compare-contrast. Citation untuk avoid plagiarism.",
+          "key_concepts": [
+            "Essay structure",
+            "Thesis statement",
+            "Supporting evidence",
+            "Types of essays",
+            "Formal writing style",
+            "Citations",
+            "Avoiding plagiarism",
+            "Revising untuk clarity"
+          ]
+        },
+        {
+          "week": 8,
+          "title": "Business & Technical English",
+          "summary": "Business English: email writing, memo, report, presentation skills, phone etiquette. Technical English: documentation (user manual, README), explaining complex concepts. Tone: formal, professional, respectful. Skills critical untuk karir global.",
+          "key_concepts": [
+            "Email writing",
+            "Report writing",
+            "Presentation skills",
+            "Technical documentation",
+            "Explaining technical concepts",
+            "Jargon dan acronyms",
+            "Professional tone",
+            "Cross-cultural communication"
+          ]
         }
       ]
     },
@@ -1781,6 +2590,122 @@
           "correct": 0,
           "explanation": "Huruf kapital untuk awal kalimat, nama diri, dan gelar."
         }
+      ],
+      "learning_materials": [
+        {
+          "week": 1,
+          "title": "Sejarah & Kedudukan Bahasa Indonesia",
+          "summary": "Bahasa Indonesia lahir dari Sumpah Pemuda 1928, diproklamasikan sebagai bahasa persatuan. Berasal dari bahasa Melayu. Kedudukan: Bahasa Nasional dan Bahasa Negara. Fungsi: alat komunikasi, ilmu pengetahuan, kebudayaan, dan pemersatu. Perkembangan: EYD, KBBI, PUEBI. Mahasiswa memahami pentingnya Bahasa Indonesia sebagai jati diri bangsa.",
+          "key_concepts": [
+            "Sumpah Pemuda 1928",
+            "Bahasa Melayu akar",
+            "Kedudukan sebagai bahasa nasional dan negara",
+            "Fungsi bahasa Indonesia",
+            "Sejarah EYD dan PUEBI",
+            "KBBI",
+            "Ragam bahasa"
+          ]
+        },
+        {
+          "week": 2,
+          "title": "Ejaan & Tanda Baca (PUEBI)",
+          "summary": "PUEBI adalah standar penulisan resmi. Aturan: huruf kapital, huruf miring. Tanda baca: titik, koma, titik koma, titik dua, tanya, seru, petik, kurung, pisah, hubung. Penulisan kata: kata depan terpisah, imbuhan digabung. Angka: 1-10 ditulis huruf, >10 angka. Email formal serupa tapi lebih singkat.",
+          "key_concepts": [
+            "Huruf kapital",
+            "Huruf miring",
+            "Tanda baca",
+            "Penulisan kata depan",
+            "Imbuhan",
+            "Penulisan angka",
+            "Akronim dan singkatan"
+          ]
+        },
+        {
+          "week": 3,
+          "title": "Struktur Kalimat Efektif",
+          "summary": "Kalimat efektif: (1) Kesatuan gagasan, (2) Kesepadanan struktur, (3) Kehematan kata, (4) Kevariasian, (5) Kelogisan. Pola: S-P, S-P-O, S-P-O-K. Kesalahan umum: kalimat ambigu, pemborosan kata, kontaminasi. Mahasiswa berlatih membedakan dan merevisi kalimat.",
+          "key_concepts": [
+            "Syarat kalimat efektif",
+            "Unsur kalimat",
+            "Kesatuan dan kesepadanan",
+            "Kehematan kata",
+            "Kevariasian struktur",
+            "Kelogisan",
+            "Kalimat ambigu",
+            "Revisi kalimat"
+          ]
+        },
+        {
+          "week": 4,
+          "title": "Paragraf (Struktur & Kohesi)",
+          "summary": "Paragraf adalah kumpulan kalimat yang membahas satu gagasan utama. Struktur: Kalimat Utama, Kalimat Penjelas. Kohesi dengan konjungsi, repetisi, sinonim, pronomina. Koherensi: logical flow ide. Jenis: narasi, deskripsi, eksposisi, argumentasi. Unity dan relevance.",
+          "key_concepts": [
+            "Kalimat utama dan penjelas",
+            "Paragraf deduktif, induktif",
+            "Kohesi",
+            "Koherensi",
+            "Jenis paragraf",
+            "Unity dan relevance",
+            "Transisi antar paragraf"
+          ]
+        },
+        {
+          "week": 5,
+          "title": "Menulis Karya Ilmiah",
+          "summary": "Karya ilmiah berdasarkan penelitian atau kajian ilmiah. Structure: Pendahuluan, Tinjauan Pustaka, Metodologi, Hasil dan Pembahasan, Simpulan dan Saran. Ciri: objektif, logis, sistematis, bahasa baku, didukung data/referensi. Kutipan dan daftar pustaka (APA, IEEE) untuk avoid plagiarisme.",
+          "key_concepts": [
+            "Struktur karya ilmiah",
+            "Bahasa baku dan formal",
+            "Objektif dan logis",
+            "Kutipan",
+            "Daftar pustaka",
+            "Menghindari plagiarisme",
+            "Revisi dan editing"
+          ]
+        },
+        {
+          "week": 6,
+          "title": "Membaca Kritis & Analisis Teks",
+          "summary": "Membaca kritis: membaca dengan questioning. Langkah: identifikasi thesis, cari evidence, evaluasi sumber, deteksi bias/fallacy, bandingkan sumber. Teks faktual vs opini. Logical fallacy: ad hominem, straw man, slippery slope. Critical reading penting di era information overload.",
+          "key_concepts": [
+            "Membaca kritis vs literal",
+            "Identifikasi argumen dan evidence",
+            "Evaluasi kredibilitas",
+            "Bias dan objectivity",
+            "Logical fallacies",
+            "Fakta vs opini",
+            "Inference dan kesimpulan"
+          ]
+        },
+        {
+          "week": 7,
+          "title": "Presentasi Lisan Efektif",
+          "summary": "Presentasi lisan: penyampaian informasi secara verbal. Persiapan: kenali audiens, tentukan tujuan, susun outline, buat visual aids. Struktur: pembukaan (hook, perkenalan), isi (3-5 poin), penutup (summary, call to action). Teknik: eye contact, volume jelas, pace, gestur, confidence.",
+          "key_concepts": [
+            "Struktur presentasi",
+            "Hook dan attention grabber",
+            "Main points dengan support",
+            "Visual aids",
+            "Eye contact dan body language",
+            "Volume dan articulation",
+            "Pacing dan pausing",
+            "Handling Q&A"
+          ]
+        },
+        {
+          "week": 8,
+          "title": "Surat & Email Formal",
+          "summary": "Surat formal: kop surat, nomor, tanggal, lampiran, perihal, alamat tujuan, salam pembuka, isi (pembukaan, isi, penutup), salam penutup, tanda tangan. Bahasa: baku, sopan, jelas, ringkas. Email formal: Subject jelas, greeting, body concise, closing. Surat lamaran kerja dan email formal akademik.",
+          "key_concepts": [
+            "Format surat formal",
+            "Bagian-bagian surat",
+            "Bahasa baku dan sopan",
+            "Pembukaan dan penutup",
+            "Email formal",
+            "Surat lamaran kerja",
+            "Etika komunikasi tertulis"
+          ]
+        }
       ]
     },
     {
@@ -1991,6 +2916,126 @@
           ],
           "correct": 0,
           "explanation": "Sila kedua: Kemanusiaan yang Adil dan Beradab."
+        }
+      ],
+      "learning_materials": [
+        {
+          "week": 1,
+          "title": "Pancasila sebagai Dasar Negara",
+          "summary": "Pancasila adalah ideologi dan dasar negara Indonesia terdiri dari lima sila: (1) Ketuhanan Yang Maha Esa, (2) Kemanusiaan yang Adil dan Beradab, (3) Persatuan Indonesia, (4) Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan, (5) Keadilan Sosial. Sejarah: dirumuskan dalam sidang BPUPKI 1945 oleh Soekarno. Fungsi: jiwa bangsa, pandangan hidup, dasar negara, sumber hukum, perjanjian luhur.",
+          "key_concepts": [
+            "Lima sila Pancasila",
+            "Sejarah perumusan",
+            "Fungsi Pancasila",
+            "Pancasila sebagai sumber hukum",
+            "Pembukaan UUD 1945",
+            "Hubungan Pancasila dengan UUD 1945",
+            "Pengamalan nilai-nilai Pancasila"
+          ]
+        },
+        {
+          "week": 2,
+          "title": "Sila Ketuhanan Yang Maha Esa",
+          "summary": "Indonesia adalah negara beragama. Kebebasan beragama (6 agama resmi). Toleransi antar umat beragama. Tidak memaksakan agama. Anti-radikalisme. Dialog antar agama. Bhinneka Tunggal Ika. Sikap respect terhadap perbedaan. Mahasiswa: respect, tidak intoleran, tidak radikalisme.",
+          "key_concepts": [
+            "Negara berdasar ketuhanan",
+            "Kebebasan beragama",
+            "6 agama resmi",
+            "Toleransi dan dialog antar agama",
+            "Menghindari radikalisme",
+            "Bhinneka Tunggal Ika",
+            "Sikap respect terhadap perbedaan"
+          ]
+        },
+        {
+          "week": 3,
+          "title": "Sila Kemanusiaan yang Adil dan Beradab",
+          "summary": "Menghormati martabat manusia tanpa diskriminasi. Anti-diskriminasi, perlakuan adil, HAM. Sikap beradab dan etis. Etika dalam teknologi (AI ethics, data privacy). Anti-bullying, anti-kekerasan. Developer: develop teknologi yang humanis, tidak bias algoritma, privacy-respecting.",
+          "key_concepts": [
+            "Martabat dan HAM",
+            "Anti-diskriminasi",
+            "Keadilan dan kesetaraan",
+            "Sikap beradab dan etis",
+            "HAM dalam UUD 1945",
+            "Ethics dalam teknologi",
+            "Privacy dan consent",
+            "Teknologi inklusif"
+          ]
+        },
+        {
+          "week": 4,
+          "title": "Sila Persatuan Indonesia",
+          "summary": "Mengutamakan kepentingan bangsa di atas golongan. Nasionalisme dan cinta tanah air. Integrasi keberagaman. Ancaman: hoax yang memecah belah, hate speech, politik identitas. Mahasiswa informatika: tanggungjawab di digital space, tidak sebar hoax, counter disinformasi, develop platform yang promote unity.",
+          "key_concepts": [
+            "Nasionalisme dan cinta tanah air",
+            "Integrasi dan solidaritas",
+            "Bhinneka Tunggal Ika",
+            "Ancaman disintegrasi",
+            "Literasi digital dan hoax",
+            "Etika media sosial",
+            "Tanggung jawab developer",
+            "Simbol negara"
+          ]
+        },
+        {
+          "week": 5,
+          "title": "Sila Kerakyatan (Demokrasi)",
+          "summary": "Kedaulatan di tangan rakyat. Demokrasi Pancasila: musyawarah untuk mufakat, hikmat kebijaksanaan, perwakilan. Prinsip: kebebasan berpendapat bertanggung jawab, rule of law, checks and balances, partisipasi publik. Digital democracy: e-voting, online petition. Waspada manipulasi (bot, fake account).",
+          "key_concepts": [
+            "Demokrasi Pancasila",
+            "Kedaulatan rakyat",
+            "Kebebasan berpendapat bertanggung jawab",
+            "Rule of law",
+            "Checks and balances",
+            "Hak politik warga negara",
+            "Partisipasi publik",
+            "Digital democracy"
+          ]
+        },
+        {
+          "week": 6,
+          "title": "Sila Keadilan Sosial",
+          "summary": "Kesejahteraan merata untuk seluruh rakyat. Ekonomi berkeadilan, akses merata terhadap pendidikan, kesehatan, pekerjaan. Perlindungan fakir miskin. Ekonomi Pancasila: koperasi, BUMN, swasta. Digital divide dan inklusi digital. Teknologi aksesibel untuk disabilitas. Fair algorithm tidak bias terhadap kelompok ekonomi rendah.",
+          "key_concepts": [
+            "Keadilan ekonomi dan sosial",
+            "Akses merata",
+            "Ekonomi Pancasila",
+            "Perlindungan kelompok rentan",
+            "Digital divide dan inklusi digital",
+            "Teknologi aksesibel",
+            "Fair algorithms",
+            "Sustainable development"
+          ]
+        },
+        {
+          "week": 7,
+          "title": "UUD 1945 & Sistem Ketatanegaraan",
+          "summary": "UUD 1945 adalah konstitusi tertulis Indonesia. Amandemen: 4 kali (1999-2002) untuk reformasi. Lembaga negara: MPR, Presiden dan Wapres, DPR, DPD, BPK, MA, MK, KY. Sistem presidensial: presiden kepala negara dan pemerintahan. Hak dan kewajiban warga negara (Pasal 27-34).",
+          "key_concepts": [
+            "Struktur UUD 1945",
+            "Amandemen UUD 1945",
+            "Lembaga negara",
+            "Sistem presidensial",
+            "Checks and balances",
+            "Hak dan kewajiban warga negara",
+            "Proses legislasi",
+            "Judicial review"
+          ]
+        },
+        {
+          "week": 8,
+          "title": "Pancasila di Era Digital",
+          "summary": "Era digital membawa tantangan: hoax (ancaman persatuan), hate speech (melanggar kemanusiaan), radikalisme online, privacy vs security, digital divide (keadilan akses). Solusi: literasi digital, regulasi, platform responsibility, ethics dalam AI. Mahasiswa informatika: agen perubahan, develop teknologi yang align dengan nilai Pancasila.",
+          "key_concepts": [
+            "Ancaman digital",
+            "Literasi digital dan fact-checking",
+            "UU PDP Indonesia",
+            "Ethics AI dan algorithm",
+            "Platform responsibility",
+            "Counter-narrative",
+            "Tech for good",
+            "Digital literacy"
+          ]
         }
       ]
     },
@@ -2203,6 +3248,126 @@
           ],
           "correct": 0,
           "explanation": "Piracy = pembajakan karya digital."
+        }
+      ],
+      "learning_materials": [
+        {
+          "week": 1,
+          "title": "Pengantar Hukum & Hukum TIK",
+          "summary": "Hukum adalah sistem aturan yang mengatur perilaku masyarakat. Jenis: pidana, perdata, administratif. Hukum TIK mengatur transaksi elektronik, privasi data, cybercrime, hak cipta software. Karakteristik TIK: borderless, rapid evolution, immateriality. Prinsip: teknologi netral, pelaku yang bertanggung jawab.",
+          "key_concepts": [
+            "Definisi hukum",
+            "Hukum pidana vs perdata",
+            "Hukum TIK dan cakupannya",
+            "Karakteristik dunia digital",
+            "Prinsip teknologi netral",
+            "Tanggung jawab developer dan user",
+            "Yurisdiksi dalam cybercrime"
+          ]
+        },
+        {
+          "week": 2,
+          "title": "UU ITE (Informasi dan Transaksi Elektronik)",
+          "summary": "UU No. 19 Tahun 2016 mengatur transaksi dan informasi elektronik. Cakupan: transaksi elektronik, cybercrime, bukti elektronik di pengadilan. Pasal kontroversial: Pasal 27 (pencemaran nama baik, SARA), Pasal 28 (hoax), Pasal 45 (sanksi pidana). Kritik: pasal karet untuk memenjarakan kritik. Defense: needed untuk tangani cybercrime.",
+          "key_concepts": [
+            "UU ITE No. 19/2016",
+            "Transaksi elektronik dan tanda tangan digital",
+            "Cybercrime (hacking, phishing, malware)",
+            "Pasal 27, 28, 45",
+            "Sanksi pidana cybercrime",
+            "Digital forensik",
+            "Kebebasan berpendapat vs pencemaran nama baik"
+          ]
+        },
+        {
+          "week": 3,
+          "title": "Perlindungan Data Pribadi",
+          "summary": "Data pribadi adalah informasi identitas individu. Ancaman: data breach, identity theft, profiling, surveillance. UU Perlindungan Data Pribadi (PDP) disahkan 2022. Prinsip GDPR: consent, purpose limitation, data minimization, right to access, right to erasure. Developer: enkripsi data, audit security, breach notification.",
+          "key_concepts": [
+            "Data pribadi dan jenis-jenisnya",
+            "UU PDP Indonesia 2022",
+            "GDPR principles",
+            "Right to access dan erasure",
+            "Data breach dan notification",
+            "Privacy-by-design",
+            "Enkripsi dan security measures",
+            "Sanksi pelanggaran"
+          ]
+        },
+        {
+          "week": 4,
+          "title": "Hak Kekayaan Intelektual (HKI) Software",
+          "summary": "HKI melindungi karya intelektual dari penggunaan tanpa izin. Hak Cipta (copyright) melindungi ekspresi kreatif (source code, UI design, dokumentasi) tanpa perlu registrasi. Paten melindungi invention. Trademark melindungi brand. Lisensi software: proprietary, open source (GPL, MIT, Apache), freeware, shareware.",
+          "key_concepts": [
+            "Hak Cipta untuk software",
+            "Paten untuk algoritma",
+            "Trademark untuk brand",
+            "Lisensi software",
+            "Fair use",
+            "Pembajakan dan sanksi",
+            "Reverse engineering",
+            "Plagiarisme code"
+          ]
+        },
+        {
+          "week": 5,
+          "title": "Lisensi Open Source",
+          "summary": "Open Source Software (OSS) adalah software dengan source code tersedia publik. Lisensi: GPL (copyleft kuat), MIT (permisif), Apache 2.0 (permisif dengan patent grant), BSD (permisif). Copyleft vs permissive. Kewajiban: include license text, credit original author. Manfaat OSS: gratis, community support, security. Risiko: compliance failure.",
+          "key_concepts": [
+            "Open Source vs proprietary",
+            "GPL (copyleft)",
+            "MIT, Apache, BSD (permissive)",
+            "Copyleft vs permissive",
+            "Kewajiban lisensi",
+            "Manfaat dan risiko OSS",
+            "License compatibility",
+            "Choosing license"
+          ]
+        },
+        {
+          "week": 6,
+          "title": "Cybercrime & Hukum Pidana TIK",
+          "summary": "Cybercrime: hacking, cracking, phishing, malware, DDoS, identity theft, online fraud, child exploitation online. UU ITE: Pasal 30 (akses ilegal), Pasal 32 (intercept), Pasal 33 (malware), Pasal 35 (manipulasi data). Sanksi: penjara dan denda. Investigasi: digital forensics. Defense: security best practices, ethical hacking.",
+          "key_concepts": [
+            "Jenis cybercrime",
+            "UU ITE Pasal 30-35",
+            "Sanksi pidana cybercrime",
+            "Digital forensics",
+            "Ethical hacking",
+            "Bug bounty programs",
+            "Security best practices",
+            "Reporting cybercrime"
+          ]
+        },
+        {
+          "week": 7,
+          "title": "E-Commerce & Perlindungan Konsumen",
+          "summary": "E-commerce: transaksi jual-beli online. Regulasi: UU ITE, UU Perlindungan Konsumen. Hak konsumen online: informasi jelas, keamanan transaksi, privasi data, garansi, dispute resolution. Kewajiban seller: honest advertising, deliver sesuai pesanan, protect data pembeli. Payment gateway dan tanda tangan digital.",
+          "key_concepts": [
+            "UU Perlindungan Konsumen",
+            "Hak konsumen online",
+            "Kewajiban seller",
+            "Payment gateway dan keamanan",
+            "Tanda tangan digital",
+            "Dispute resolution",
+            "Terms of Service",
+            "Return dan refund policy"
+          ]
+        },
+        {
+          "week": 8,
+          "title": "Etika Profesi IT & Tanggung Jawab Developer",
+          "summary": "Profesi IT memiliki tanggung jawab etis dan legal. Prinsip etika: responsibility, honesty, fairness, respect for privacy, professional competence. Kode etik: ACM Code of Ethics, IEEE Code. Tanggung jawab developer: security, privacy, accessibility, transparency, sustainability. Dilemma: boss minta develop tool untuk surveillance atau manipulasi — refuse jika melanggar etika.",
+          "key_concepts": [
+            "Prinsip etika IT",
+            "ACM dan IEEE Code of Ethics",
+            "Secure coding practices",
+            "Privacy-by-design",
+            "Accessibility (WCAG)",
+            "Algorithm transparency",
+            "Whistleblowing",
+            "Ethical dilemmas dalam IT"
+          ]
         }
       ]
     }
