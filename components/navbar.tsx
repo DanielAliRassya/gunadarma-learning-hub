@@ -3,11 +3,16 @@
 import Link from "next/link";
 import { useTheme } from "./theme-provider";
 import { Menu, Moon, Sun, Search, BookOpen } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function Navbar() {
   const { theme, setTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <nav className="sticky top-0 z-50 glass border-b border-slate-200 dark:border-slate-700">
@@ -43,7 +48,7 @@ export function Navbar() {
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               className="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition"
             >
-              {theme === "dark" ? (
+              {mounted && theme === "dark" ? (
                 <Sun className="w-5 h-5" />
               ) : (
                 <Moon className="w-5 h-5" />

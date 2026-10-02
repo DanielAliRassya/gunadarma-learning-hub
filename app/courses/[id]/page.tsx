@@ -3,7 +3,7 @@
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { getCourseById } from "@/lib/courses";
-import { ArrowLeft, Clock, User, MapPin, FileText, Youtube, CheckCircle } from "lucide-react";
+import { ArrowLeft, Clock, User, MapPin, FileText, PlayCircle, CheckCircle } from "lucide-react";
 import { useState } from "react";
 
 export default function CoursePage() {
@@ -155,7 +155,7 @@ export default function CoursePage() {
                     className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-6"
                   >
                     <div className="flex items-center gap-3 mb-4">
-                      <Youtube className="w-6 h-6 text-red-500" />
+                      <PlayCircle className="w-6 h-6 text-red-500" />
                       <h3 className="text-lg font-bold">{playlist.title}</h3>
                     </div>
                     <a
@@ -170,7 +170,7 @@ export default function CoursePage() {
                 ))
               ) : (
                 <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-12 text-center">
-                  <Youtube className="w-12 h-12 text-slate-400 mx-auto mb-4" />
+                  <PlayCircle className="w-12 h-12 text-slate-400 mx-auto mb-4" />
                   <p className="text-slate-600 dark:text-slate-400">
                     Video pembelajaran akan segera ditambahkan
                   </p>

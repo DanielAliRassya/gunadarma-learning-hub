@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BookOpen, Mail, Github } from "lucide-react";
+import { BookOpen, Mail, Link as LinkIcon } from "lucide-react";
 
 export function Footer() {
   return (
@@ -91,7 +91,7 @@ export function Footer() {
                 href="https://github.com"
                 className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400"
               >
-                <Github className="w-5 h-5" />
+                <LinkIcon className="w-5 h-5" />
               </a>
             </div>
           </div>
