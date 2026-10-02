@@ -136,6 +136,126 @@
           ],
           "correct": 2,
           "explanation": "`len()` adalah fungsi built-in Python untuk mendapatkan panjang (jumlah elemen) dari sebuah list atau string."
+        },
+        {
+          "id": 6,
+          "question": "Apa itu variabel dalam pemrograman?",
+          "options": [
+            "Fungsi matematika",
+            "Tempat penyimpanan data di memori",
+            "Jenis loop",
+            "Operator logika"
+          ],
+          "correct": 1,
+          "explanation": "Variabel adalah wadah untuk menyimpan nilai data di memori yang bisa berubah selama program berjalan."
+        },
+        {
+          "id": 7,
+          "question": "Loop yang minimal dieksekusi 1 kali adalah?",
+          "options": [
+            "for",
+            "while",
+            "do-while",
+            "if-else"
+          ],
+          "correct": 2,
+          "explanation": "Do-while loop memeriksa kondisi SETELAH eksekusi, jadi minimal 1 kali dijalankan."
+        },
+        {
+          "id": 8,
+          "question": "Operator modulus (%) menghasilkan?",
+          "options": [
+            "Hasil bagi",
+            "Sisa pembagian",
+            "Pangkat",
+            "Akar"
+          ],
+          "correct": 1,
+          "explanation": "Operator % (modulus) mengembalikan sisa pembagian, contoh: 10 % 3 = 1."
+        },
+        {
+          "id": 9,
+          "question": "Array di Python disebut?",
+          "options": [
+            "List",
+            "Vector",
+            "Matrix",
+            "Tuple"
+          ],
+          "correct": 0,
+          "explanation": "Python menggunakan istilah 'list' untuk struktur data array (mutable sequence)."
+        },
+        {
+          "id": 10,
+          "question": "Fungsi len() digunakan untuk?",
+          "options": [
+            "Menghapus data",
+            "Mengubah tipe data",
+            "Menghitung panjang/jumlah elemen",
+            "Mengurutkan data"
+          ],
+          "correct": 2,
+          "explanation": "len() mengembalikan jumlah elemen dalam list, string, atau struktur data lainnya."
+        },
+        {
+          "id": 11,
+          "question": "Apa output dari: print(5 > 3 and 2 < 1)?",
+          "options": [
+            "True",
+            "False",
+            "Error",
+            "None"
+          ],
+          "correct": 1,
+          "explanation": "5>3 adalah True, tapi 2<1 adalah False. True AND False = False."
+        },
+        {
+          "id": 12,
+          "question": "Komentar satu baris di Python menggunakan?",
+          "options": [
+            "//",
+            "#",
+            "/* */",
+            "<!--"
+          ],
+          "correct": 1,
+          "explanation": "Python menggunakan # untuk komentar satu baris."
+        },
+        {
+          "id": 13,
+          "question": "Fungsi range(5) menghasilkan angka?",
+          "options": [
+            "1 sampai 5",
+            "0 sampai 5",
+            "0 sampai 4",
+            "1 sampai 4"
+          ],
+          "correct": 2,
+          "explanation": "range(5) menghasilkan 0, 1, 2, 3, 4 (dimulai dari 0, sampai n-1)."
+        },
+        {
+          "id": 14,
+          "question": "Tipe data untuk nilai True/False adalah?",
+          "options": [
+            "int",
+            "string",
+            "boolean",
+            "float"
+          ],
+          "correct": 2,
+          "explanation": "Boolean adalah tipe data untuk nilai logika True atau False."
+        },
+        {
+          "id": 15,
+          "question": "Apa fungsi dari 'break' dalam loop?",
+          "options": [
+            "Melanjutkan iterasi berikutnya",
+            "Menghentikan loop sepenuhnya",
+            "Mengulang dari awal",
+            "Tidak ada efek"
+          ],
+          "correct": 1,
+          "explanation": "Break menghentikan loop dan keluar dari loop tersebut sepenuhnya."
         }
       ]
     },
@@ -234,6 +354,126 @@
           ],
           "correct": 1,
           "explanation": "File Python menggunakan ekstensi .py (contoh: program.py)."
+        },
+        {
+          "id": 6,
+          "question": "Di mana kita menulis kode Python?",
+          "options": [
+            "Editor teks atau IDE",
+            "MS Paint",
+            "Calculator",
+            "Notepad only"
+          ],
+          "correct": 0,
+          "explanation": "Kode Python ditulis di editor teks atau IDE."
+        },
+        {
+          "id": 7,
+          "question": "Cara menampilkan output di Python?",
+          "options": [
+            "console.log()",
+            "print()",
+            "echo",
+            "System.out.print()"
+          ],
+          "correct": 1,
+          "explanation": "Python menggunakan print() untuk output."
+        },
+        {
+          "id": 8,
+          "question": "Tipe data untuk angka desimal di Python?",
+          "options": [
+            "int",
+            "float",
+            "str",
+            "bool"
+          ],
+          "correct": 1,
+          "explanation": "Float untuk angka desimal."
+        },
+        {
+          "id": 9,
+          "question": "Pernyataan if diakhiri dengan?",
+          "options": [
+            "Titik koma",
+            "Titik dua",
+            "Kurung kurawal",
+            "Tanda seru"
+          ],
+          "correct": 1,
+          "explanation": "Python menggunakan titik dua (:) setelah kondisi if."
+        },
+        {
+          "id": 10,
+          "question": "List dalam Python ditulis dengan?",
+          "options": [
+            "()",
+            "[]",
+            "{}",
+            "<>"
+          ],
+          "correct": 1,
+          "explanation": "List Python menggunakan kurung siku []."
+        },
+        {
+          "id": 11,
+          "question": "Untuk mengulang 10 kali gunakan?",
+          "options": [
+            "if",
+            "for i in range(10)",
+            "print(10)",
+            "input()"
+          ],
+          "correct": 1,
+          "explanation": "for i in range(10) mengulang 10 kali."
+        },
+        {
+          "id": 12,
+          "question": "Hasil dari 10 // 3?",
+          "options": [
+            "3.33",
+            "3",
+            "1",
+            "Error"
+          ],
+          "correct": 1,
+          "explanation": "// adalah floor division, 10 // 3 = 3."
+        },
+        {
+          "id": 13,
+          "question": "Dokumentasi praktikum penting untuk?",
+          "options": [
+            "Mengingat langkah kerja",
+            "Mengganti kode",
+            "Menghapus file",
+            "Meningkatkan kecepatan"
+          ],
+          "correct": 0,
+          "explanation": "Dokumentasi mencatat langkah dan hasil praktikum."
+        },
+        {
+          "id": 14,
+          "question": "Fungsi str() untuk?",
+          "options": [
+            "Mengubah menjadi string",
+            "Menghitung string",
+            "Membagi string",
+            "Menghapus string"
+          ],
+          "correct": 0,
+          "explanation": "str() mengkonversi nilai menjadi string."
+        },
+        {
+          "id": 15,
+          "question": "Error SyntaxError berarti?",
+          "options": [
+            "Salah logika",
+            "Salah struktur penulisan kode",
+            "Data tidak ditemukan",
+            "Program lambat"
+          ],
+          "correct": 1,
+          "explanation": "SyntaxError saat penulisan kode tidak sesuai aturan."
         }
       ]
     },
@@ -353,6 +593,126 @@
           ],
           "correct": 0,
           "explanation": "Sifat distributif union: A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)."
+        },
+        {
+          "id": 6,
+          "question": "Himpunan A = {1,2,3} dan B = {2,3,4}. A ∩ B adalah?",
+          "options": [
+            "{1,2,3,4}",
+            "{2,3}",
+            "{1,4}",
+            "{}"
+          ],
+          "correct": 1,
+          "explanation": "Irisan (∩) berisi elemen yang ada di kedua himpunan: {2,3}."
+        },
+        {
+          "id": 7,
+          "question": "Implikasi p → q bernilai salah ketika?",
+          "options": [
+            "p benar, q benar",
+            "p benar, q salah",
+            "p salah, q benar",
+            "p salah, q salah"
+          ],
+          "correct": 1,
+          "explanation": "Implikasi p→q hanya salah jika p benar dan q salah."
+        },
+        {
+          "id": 8,
+          "question": "Berapa banyak subset dari {a,b,c}?",
+          "options": [
+            "3",
+            "6",
+            "8",
+            "9"
+          ],
+          "correct": 2,
+          "explanation": "Banyak subset = 2^n = 2^3 = 8."
+        },
+        {
+          "id": 9,
+          "question": "Negasi dari Semua mahasiswa rajin adalah?",
+          "options": [
+            "Tidak ada mahasiswa rajin",
+            "Ada mahasiswa yang tidak rajin",
+            "Semua mahasiswa tidak rajin",
+            "Beberapa mahasiswa rajin"
+          ],
+          "correct": 1,
+          "explanation": "Negasi dari 'semua P' adalah 'ada yang tidak P'."
+        },
+        {
+          "id": 10,
+          "question": "Relasi yang setiap elemen domain memiliki pasangan unik disebut?",
+          "options": [
+            "Relasi refleksif",
+            "Fungsi",
+            "Relasi simetris",
+            "Relasi transitif"
+          ],
+          "correct": 1,
+          "explanation": "Fungsi adalah relasi yang memetakan setiap elemen domain ke tepat satu elemen kodomain."
+        },
+        {
+          "id": 11,
+          "question": "Bilangan rasional adalah?",
+          "options": [
+            "Bilangan bulat positif",
+            "Bilangan real yang tak terhingga",
+            "Bilangan yang dapat dinyatakan sebagai a/b",
+            "Bilangan negatif"
+          ],
+          "correct": 2,
+          "explanation": "Bilangan rasional dapat dinyatakan sebagai pembagian dua bilangan bulat a/b."
+        },
+        {
+          "id": 12,
+          "question": "Algoritma Euclid digunakan untuk mencari?",
+          "options": [
+            "FPB",
+            "KPK",
+            "Akar kuadrat",
+            "Faktorial"
+          ],
+          "correct": 0,
+          "explanation": "Algoritma Euclid (Euclidean algorithm) untuk mencari FPB/GCD."
+        },
+        {
+          "id": 13,
+          "question": "Tabel kebenaran untuk 2 proposisi memiliki berapa baris?",
+          "options": [
+            "2",
+            "4",
+            "6",
+            "8"
+          ],
+          "correct": 1,
+          "explanation": "Untuk n proposisi, tabel kebenaran memiliki 2^n baris. Untuk 2 proposisi = 4 baris."
+        },
+        {
+          "id": 14,
+          "question": "Konvers dari p → q adalah?",
+          "options": [
+            "q → p",
+            "negasi p → negasi q",
+            "negasi q → negasi p",
+            "p AND q"
+          ],
+          "correct": 0,
+          "explanation": "Konvers dari implikasi p→q adalah q→p."
+        },
+        {
+          "id": 15,
+          "question": "Berapa nilai C(5,2)?",
+          "options": [
+            "10",
+            "20",
+            "25",
+            "5"
+          ],
+          "correct": 0,
+          "explanation": "C(5,2) = 5!/(2!·3!) = (5×4)/2 = 10."
         }
       ]
     },
@@ -447,6 +807,126 @@
           ],
           "correct": 0,
           "explanation": "(f∘g)(x) = f(x^2) = 2x^2 + 1."
+        },
+        {
+          "id": 6,
+          "question": "Turunan dari sin(x) adalah?",
+          "options": [
+            "cos(x)",
+            "-cos(x)",
+            "-sin(x)",
+            "tan(x)"
+          ],
+          "correct": 0,
+          "explanation": "d/dx sin(x) = cos(x)."
+        },
+        {
+          "id": 7,
+          "question": "Integral dari e^x dx adalah?",
+          "options": [
+            "e^x + C",
+            "x*e^x + C",
+            "ln(x) + C",
+            "e^(x^2) + C"
+          ],
+          "correct": 0,
+          "explanation": "Integral e^x = e^x + C."
+        },
+        {
+          "id": 8,
+          "question": "Jika f(x) = x^3 - 3x^2, titik stasioner f'(x) = 0 adalah?",
+          "options": [
+            "x = 0 dan x = 2",
+            "x = 1 dan x = 3",
+            "x = -1 dan x = 1",
+            "x = 0 saja"
+          ],
+          "correct": 0,
+          "explanation": "f'(x) = 3x^2 - 6x = 3x(x-2). f'(x)=0 → x=0 atau x=2."
+        },
+        {
+          "id": 9,
+          "question": "Persamaan garis gradien 2 melalui (1,3)?",
+          "options": [
+            "y = 2x + 1",
+            "y = 2x + 3",
+            "y = 2x - 1",
+            "y = x + 2"
+          ],
+          "correct": 0,
+          "explanation": "y - 3 = 2(x - 1) → y = 2x + 1."
+        },
+        {
+          "id": 10,
+          "question": "Nilai log₂(8) adalah?",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "8"
+          ],
+          "correct": 1,
+          "explanation": "2^3 = 8, jadi log₂(8) = 3."
+        },
+        {
+          "id": 11,
+          "question": "Fungsi f(x) = x^2 - 4x + 5 minimum di?",
+          "options": [
+            "x = 2",
+            "x = -2",
+            "tidak ada",
+            "x = 0"
+          ],
+          "correct": 0,
+          "explanation": "Parabola terbuka ke atas, minimum di x = -b/2a = 4/2 = 2."
+        },
+        {
+          "id": 12,
+          "question": "Turunan dari f(x) = ln(x) adalah?",
+          "options": [
+            "1/x",
+            "x",
+            "e^x",
+            "1"
+          ],
+          "correct": 0,
+          "explanation": "d/dx ln(x) = 1/x."
+        },
+        {
+          "id": 13,
+          "question": "Jumlah deret aritmatika 1+3+5+...+99?",
+          "options": [
+            "2500",
+            "2600",
+            "2400",
+            "2300"
+          ],
+          "correct": 0,
+          "explanation": "Suku n = 99, banyak suku = 50, jumlah = 50/2 × (1+99) = 2500."
+        },
+        {
+          "id": 14,
+          "question": "Limit sin(x)/x ketika x → 0?",
+          "options": [
+            "0",
+            "1",
+            "tak hingga",
+            "tidak ada"
+          ],
+          "correct": 1,
+          "explanation": "Limit standar: lim(x→0) sin(x)/x = 1."
+        },
+        {
+          "id": 15,
+          "question": "Determinan matriks [[2,1],[3,4]]?",
+          "options": [
+            "5",
+            "6",
+            "11",
+            "-5"
+          ],
+          "correct": 0,
+          "explanation": "det = (2×4) - (1×3) = 8 - 3 = 5."
         }
       ]
     },
@@ -541,6 +1021,126 @@
           ],
           "correct": 1,
           "explanation": "Tekanan = Gaya / Luas (P = F/A), satuan Pascal (Pa)."
+        },
+        {
+          "id": 6,
+          "question": "Kecepatan adalah?",
+          "options": [
+            "Perpindahan dibagi waktu",
+            "Jarak dibagi waktu",
+            "Massa kali percepatan",
+            "Gaya dibagi luas"
+          ],
+          "correct": 1,
+          "explanation": "Kecepatan (speed) = jarak / waktu."
+        },
+        {
+          "id": 7,
+          "question": "Rumus gaya gravitasi Newton?",
+          "options": [
+            "G(m1+m2)/r",
+            "Gm1m2/r^2",
+            "Gm1m2/r",
+            "G(m1-m2)/r"
+          ],
+          "correct": 1,
+          "explanation": "F = G·m1·m2/r²."
+        },
+        {
+          "id": 8,
+          "question": "Satuan SI untuk energi?",
+          "options": [
+            "Newton",
+            "Joule",
+            "Watt",
+            "Pascal"
+          ],
+          "correct": 1,
+          "explanation": "Joule (J) adalah satuan energi."
+        },
+        {
+          "id": 9,
+          "question": "Massa jenis air?",
+          "options": [
+            "1 kg/m³",
+            "1000 kg/m³",
+            "100 kg/m³",
+            "10 kg/m³"
+          ],
+          "correct": 1,
+          "explanation": "Massa jenis air = 1000 kg/m³."
+        },
+        {
+          "id": 10,
+          "question": "Sifat koligatif larutan dipengaruhi oleh?",
+          "options": [
+            "Jenis pelarut",
+            "Jumlah partikel zat terlarut",
+            "Warna larutan",
+            "Suhu"
+          ],
+          "correct": 1,
+          "explanation": "Sifat koligatif bergantung pada jumlah partikel zat terlarut."
+        },
+        {
+          "id": 11,
+          "question": "Hukum Ohm V = ?",
+          "options": [
+            "I/R",
+            "I*R",
+            "R/I",
+            "I+R"
+          ],
+          "correct": 1,
+          "explanation": "V = I·R."
+        },
+        {
+          "id": 12,
+          "question": "Rumus massa jenis?",
+          "options": [
+            "m/V",
+            "V/m",
+            "m*V",
+            "m+V"
+          ],
+          "correct": 0,
+          "explanation": "ρ = massa / volume."
+        },
+        {
+          "id": 13,
+          "question": "Frekuensi satuan SI-nya?",
+          "options": [
+            "Hertz",
+            "Joule",
+            "Watt",
+            "Newton"
+          ],
+          "correct": 0,
+          "explanation": "Frekuensi satuan Hertz (Hz)."
+        },
+        {
+          "id": 14,
+          "question": "Asam memiliki pH?",
+          "options": [
+            "Lebih dari 7",
+            "Sama dengan 7",
+            "Kurang dari 7",
+            "Netral"
+          ],
+          "correct": 2,
+          "explanation": "Asam memiliki pH < 7."
+        },
+        {
+          "id": 15,
+          "question": "Rumus momentum?",
+          "options": [
+            "m/v",
+            "m*v",
+            "m*a",
+            "F/a"
+          ],
+          "correct": 1,
+          "explanation": "p = m·v."
         }
       ]
     },
@@ -641,6 +1241,126 @@
           ],
           "correct": 0,
           "explanation": "HTTP = HyperText Transfer Protocol."
+        },
+        {
+          "id": 6,
+          "question": "CPU singkatan dari?",
+          "options": [
+            "Central Processing Unit",
+            "Computer Personal Unit",
+            "Central Process Unit",
+            "Core Processing Unit"
+          ],
+          "correct": 0,
+          "explanation": "CPU = Central Processing Unit."
+        },
+        {
+          "id": 7,
+          "question": "Komponen penyimpan data permanen?",
+          "options": [
+            "RAM",
+            "Harddisk/SSD",
+            "CPU",
+            "Monitor"
+          ],
+          "correct": 1,
+          "explanation": "Harddisk/SSD menyimpan data meskipun komputer mati."
+        },
+        {
+          "id": 8,
+          "question": "Hardware adalah?",
+          "options": [
+            "Perangkat lunak",
+            "Perangkat keras",
+            "Jaringan internet",
+            "Data digital"
+          ],
+          "correct": 1,
+          "explanation": "Hardware adalah komponen fisik komputer."
+        },
+        {
+          "id": 9,
+          "question": "Software aplikasi contohnya?",
+          "options": [
+            "Microsoft Word",
+            "CPU",
+            "Monitor",
+            "Keyboard"
+          ],
+          "correct": 0,
+          "explanation": "Microsoft Word adalah software aplikasi."
+        },
+        {
+          "id": 10,
+          "question": "Jaringan komputer area besar?",
+          "options": [
+            "LAN",
+            "MAN",
+            "WAN",
+            "PAN"
+          ],
+          "correct": 2,
+          "explanation": "WAN mencakup area geografis luas."
+        },
+        {
+          "id": 11,
+          "question": "Perangkat untuk menghubungkan jaringan?",
+          "options": [
+            "Router",
+            "Printer",
+            "Scanner",
+            "Speaker"
+          ],
+          "correct": 0,
+          "explanation": "Router menghubungkan dan mengarahkan lalu lintas data."
+        },
+        {
+          "id": 12,
+          "question": "Cloud computing berarti?",
+          "options": [
+            "Server jarak jauh via internet",
+            "Komputer di atas awan",
+            "Komputer tanpa listrik",
+            "Jaringan lokal"
+          ],
+          "correct": 0,
+          "explanation": "Cloud computing menggunakan server jarak jauh via internet."
+        },
+        {
+          "id": 13,
+          "question": "Contoh sistem operasi?",
+          "options": [
+            "Windows, Linux, macOS",
+            "Word, Excel",
+            "Chrome, Firefox",
+            "Facebook, Instagram"
+          ],
+          "correct": 0,
+          "explanation": "Windows, Linux, dan macOS adalah sistem operasi."
+        },
+        {
+          "id": 14,
+          "question": "Perangkat input?",
+          "options": [
+            "Monitor",
+            "Printer",
+            "Keyboard",
+            "Speaker"
+          ],
+          "correct": 2,
+          "explanation": "Keyboard adalah perangkat input."
+        },
+        {
+          "id": 15,
+          "question": "Database digunakan untuk?",
+          "options": [
+            "Mengelola data terstruktur",
+            "Mengedit foto",
+            "Memutar video",
+            "Mengetik dokumen"
+          ],
+          "correct": 0,
+          "explanation": "Database menyimpan dan mengelola data terstruktur."
         }
       ]
     },
@@ -729,6 +1449,126 @@
           ],
           "correct": 1,
           "explanation": "'An' digunakan sebelum kata yang diawali huruf vokal (apple = a-p-l-e, huruf a adalah vokal)."
+        },
+        {
+          "id": 6,
+          "question": "He ___ an engineer.",
+          "options": [
+            "is",
+            "are",
+            "am",
+            "be"
+          ],
+          "correct": 0,
+          "explanation": "He menggunakan to be 'is'."
+        },
+        {
+          "id": 7,
+          "question": "Past tense dari eat?",
+          "options": [
+            "eated",
+            "ate",
+            "eaten",
+            "eating"
+          ],
+          "correct": 1,
+          "explanation": "Ate = past tense dari eat."
+        },
+        {
+          "id": 8,
+          "question": "They ___ playing football.",
+          "options": [
+            "is",
+            "are",
+            "am",
+            "was"
+          ],
+          "correct": 1,
+          "explanation": "They menggunakan are dalam present continuous."
+        },
+        {
+          "id": 9,
+          "question": "Arti beautiful?",
+          "options": [
+            "Cantik",
+            "Besar",
+            "Cepat",
+            "Pintar"
+          ],
+          "correct": 0,
+          "explanation": "Beautiful = cantik/indah."
+        },
+        {
+          "id": 10,
+          "question": "Antonim happy?",
+          "options": [
+            "sad",
+            "angry",
+            "tired",
+            "excited"
+          ],
+          "correct": 0,
+          "explanation": "Sad (sedih) lawan dari happy (senang)."
+        },
+        {
+          "id": 11,
+          "question": "This is ___ book.",
+          "options": [
+            "my",
+            "me",
+            "I",
+            "mine"
+          ],
+          "correct": 0,
+          "explanation": "My = possessive adjective sebelum kata benda."
+        },
+        {
+          "id": 12,
+          "question": "She ___ to the market yesterday.",
+          "options": [
+            "go",
+            "goes",
+            "went",
+            "going"
+          ],
+          "correct": 2,
+          "explanation": "Went untuk past tense (yesterday)."
+        },
+        {
+          "id": 13,
+          "question": "Preposisi untuk ___ 7 o'clock?",
+          "options": [
+            "in",
+            "on",
+            "at",
+            "by"
+          ],
+          "correct": 2,
+          "explanation": "At untuk waktu spesifik."
+        },
+        {
+          "id": 14,
+          "question": "I have ___ apple and ___ banana.",
+          "options": [
+            "a/an",
+            "an/a",
+            "the/the",
+            "a/a"
+          ],
+          "correct": 1,
+          "explanation": "An sebelum vokal, a sebelum konsonan."
+        },
+        {
+          "id": 15,
+          "question": "Comparative dari good?",
+          "options": [
+            "gooder",
+            "better",
+            "best",
+            "more good"
+          ],
+          "correct": 1,
+          "explanation": "Better = comparative dari good."
         }
       ]
     },
@@ -820,6 +1660,126 @@
           ],
           "correct": 3,
           "explanation": "Semua pilihan adalah kata baku yang dapat menggantikan kata tidak baku 'bego'."
+        },
+        {
+          "id": 6,
+          "question": "Kata baku: Proses ___ data?",
+          "options": [
+            "pengolahan",
+            "pengolahhan",
+            "pengolahanan",
+            "pengerjaan"
+          ],
+          "correct": 0,
+          "explanation": "Pengolahan = kata baku."
+        },
+        {
+          "id": 7,
+          "question": "Kalimat pasif ditandai dengan?",
+          "options": [
+            "Kata kerja aktif",
+            "Awalan di- atau ter-",
+            "Kata sifat",
+            "Kata depan"
+          ],
+          "correct": 1,
+          "explanation": "Kalimat pasif sering menggunakan awalan di- atau ter-."
+        },
+        {
+          "id": 8,
+          "question": "Makna kata karya?",
+          "options": [
+            "Hasil kerja/buat",
+            "Alat tulis",
+            "Tempat kerja",
+            "Waktu kerja"
+          ],
+          "correct": 0,
+          "explanation": "Karya = hasil kerja atau buatan."
+        },
+        {
+          "id": 9,
+          "question": "Kata baku?",
+          "options": [
+            "analis",
+            "analisis",
+            "analys",
+            "analisys"
+          ],
+          "correct": 1,
+          "explanation": "Analisis = bentuk baku."
+        },
+        {
+          "id": 10,
+          "question": "Fungsi konjungsi?",
+          "options": [
+            "Menghubungkan kata, frasa, atau kalimat",
+            "Memperjelas waktu",
+            "Memberi keterangan tempat",
+            "Menyatakan sikap"
+          ],
+          "correct": 0,
+          "explanation": "Konjungsi menghubungkan kata, frasa, atau kalimat."
+        },
+        {
+          "id": 11,
+          "question": "Gaya bahasa metafora?",
+          "options": [
+            "Bandingan tanpa kata seperti",
+            "Bandingan dengan kata seperti",
+            "Pengulangan kata",
+            "Pertentangan makna"
+          ],
+          "correct": 0,
+          "explanation": "Metafora = kiasan menyamakan dua hal tanpa pembanding."
+        },
+        {
+          "id": 12,
+          "question": "Kalimat tanya diakhiri dengan?",
+          "options": [
+            "Tanda titik",
+            "Tanda tanya",
+            "Tanda seru",
+            "Tanda koma"
+          ],
+          "correct": 1,
+          "explanation": "Kalimat tanya menggunakan tanda tanya."
+        },
+        {
+          "id": 13,
+          "question": "Kata baku memperbaiki atau memperbaiki?",
+          "options": [
+            "memperbaiki",
+            "memperbaiki",
+            "memperbaiki",
+            "memperbaiki"
+          ],
+          "correct": 0,
+          "explanation": "Kata baku: memperbaiki."
+        },
+        {
+          "id": 14,
+          "question": "Struktur teks prosedur?",
+          "options": [
+            "Tujuan, bahan, langkah",
+            "Orientasi, koda",
+            "Identifikasi, deskripsi",
+            "Pendahuluan, penutup"
+          ],
+          "correct": 0,
+          "explanation": "Teks prosedur berisi tujuan, bahan, dan langkah."
+        },
+        {
+          "id": 15,
+          "question": "Huruf kapital digunakan untuk?",
+          "options": [
+            "Awal kalimat, nama diri, gelar",
+            "Setiap kata",
+            "Akhir kalimat saja",
+            "Kata sambung"
+          ],
+          "correct": 0,
+          "explanation": "Huruf kapital untuk awal kalimat, nama diri, dan gelar."
         }
       ]
     },
@@ -911,6 +1871,126 @@
           ],
           "correct": 0,
           "explanation": "Sila kelima: Keadilan Sosial bagi Seluruh Rakyat Indonesia."
+        },
+        {
+          "id": 6,
+          "question": "Pancasila dilahirkan pada?",
+          "options": [
+            "17 Agustus 1945",
+            "1 Juni 1945",
+            "18 Agustus 1945",
+            "10 November 1945"
+          ],
+          "correct": 1,
+          "explanation": "Pancasila dilahirkan 1 Juni 1945."
+        },
+        {
+          "id": 7,
+          "question": "BPUPKI berdiri pada?",
+          "options": [
+            "29 April 1945",
+            "17 Agustus 1945",
+            "10 November 1945",
+            "1 Juni 1945"
+          ],
+          "correct": 0,
+          "explanation": "BPUPKI dibentuk 29 April 1945."
+        },
+        {
+          "id": 8,
+          "question": "PPKI dibentuk untuk?",
+          "options": [
+            "Menyelidiki usaha persiapan",
+            "Mempersiapkan kemerdekaan",
+            "Mengatur ekonomi",
+            "Menyusun konstitusi"
+          ],
+          "correct": 1,
+          "explanation": "PPKI = Panitia Persiapan Kemerdekaan Indonesia."
+        },
+        {
+          "id": 9,
+          "question": "Sila keempat berkaitan dengan?",
+          "options": [
+            "Kerakyatan",
+            "Keadilan sosial",
+            "Ketuhanan",
+            "Persatuan"
+          ],
+          "correct": 0,
+          "explanation": "Sila keempat: Kerakyatan yang Dipimpin Hikmat."
+        },
+        {
+          "id": 10,
+          "question": "Lambang sila kelima?",
+          "options": [
+            "Bintang emas",
+            "Padi dan kapas",
+            "Kepala banteng",
+            "Pohon beringin"
+          ],
+          "correct": 1,
+          "explanation": "Padi dan kapas = sila kelima (kesejahteraan)."
+        },
+        {
+          "id": 11,
+          "question": "Dasar negara Indonesia?",
+          "options": [
+            "UUD 1945",
+            "Pancasila",
+            "NKRI",
+            "Bhinneka Tunggal Ika"
+          ],
+          "correct": 1,
+          "explanation": "Pancasila = dasar negara RI."
+        },
+        {
+          "id": 12,
+          "question": "Ideologi negara Indonesia?",
+          "options": [
+            "Liberalisme",
+            "Kapitalisme",
+            "Pancasila",
+            "Sosialisme"
+          ],
+          "correct": 2,
+          "explanation": "Pancasila = ideologi negara."
+        },
+        {
+          "id": 13,
+          "question": "Gotong royong mencerminkan sila ke?",
+          "options": [
+            "Kedua",
+            "Ketiga",
+            "Kelima",
+            "Keempat"
+          ],
+          "correct": 1,
+          "explanation": "Gotong royong = sila ketiga (Persatuan Indonesia)."
+        },
+        {
+          "id": 14,
+          "question": "Proklamasi dibacakan oleh?",
+          "options": [
+            "Soekarno-Hatta",
+            "Mohammad Yamin",
+            "Sutan Sjahrir",
+            "Ki Hajar Dewantara"
+          ],
+          "correct": 0,
+          "explanation": "Proklamasi dibacakan Soekarno-Hatta 17 Agustus 1945."
+        },
+        {
+          "id": 15,
+          "question": "Sila kedua menekankan?",
+          "options": [
+            "Kemanusiaan yang adil dan beradab",
+            "Persatuan",
+            "Ketuhanan",
+            "Kerakyatan"
+          ],
+          "correct": 0,
+          "explanation": "Sila kedua: Kemanusiaan yang Adil dan Beradab."
         }
       ]
     },
@@ -1003,6 +2083,126 @@
           ],
           "correct": 3,
           "explanation": "Etika TIK mencakup privasi, keamanan, kepemilikan, akurasi, dan aksesibilitas."
+        },
+        {
+          "id": 6,
+          "question": "UU PDP disahkan tahun?",
+          "options": [
+            "2016",
+            "2022",
+            "2020",
+            "2019"
+          ],
+          "correct": 1,
+          "explanation": "UU PDP disahkan 20 Oktober 2022."
+        },
+        {
+          "id": 7,
+          "question": "Hak cipta berlaku selama?",
+          "options": [
+            "10 tahun",
+            "50 tahun",
+            "70 tahun",
+            "Seumur hidup + 70 tahun"
+          ],
+          "correct": 3,
+          "explanation": "Hak cipta berlaku seumur hidup pencipta + 70 tahun."
+        },
+        {
+          "id": 8,
+          "question": "Paten melindungi?",
+          "options": [
+            "Invensi baru",
+            "Merek dagang",
+            "Karya sastra",
+            "Desain industri"
+          ],
+          "correct": 0,
+          "explanation": "Paten melindungi invensi baru."
+        },
+        {
+          "id": 9,
+          "question": "Merek berfungsi untuk?",
+          "options": [
+            "Membedakan produk/jasa",
+            "Melindungi hak cipta",
+            "Mendaftarkan paten",
+            "Mengatur kontrak"
+          ],
+          "correct": 0,
+          "explanation": "Merek membedakan produk/jasa."
+        },
+        {
+          "id": 10,
+          "question": "UU ITE mengatur?",
+          "options": [
+            "Informasi dan transaksi elektronik",
+            "Hak paten",
+            "Hak cipta",
+            "Perseroan terbatas"
+          ],
+          "correct": 0,
+          "explanation": "UU ITE mengatur informasi dan transaksi elektronik."
+        },
+        {
+          "id": 11,
+          "question": "Defamasi online berdasarkan?",
+          "options": [
+            "UU ITE",
+            "UU Perkawinan",
+            "UU Pendidikan",
+            "UU Perhubungan"
+          ],
+          "correct": 0,
+          "explanation": "Defamasi online diatur UU ITE."
+        },
+        {
+          "id": 12,
+          "question": "Open source dapat?",
+          "options": [
+            "Dilihat, dimodifikasi, didistribusikan",
+            "Dijual tanpa lisensi",
+            "Dipakai tanpa aturan",
+            "Dihapus"
+          ],
+          "correct": 0,
+          "explanation": "Open source memungkinkan dilihat, dimodifikasi, didistribusikan."
+        },
+        {
+          "id": 13,
+          "question": "E-commerce diatur dalam?",
+          "options": [
+            "UU ITE",
+            "UU Perdagangan",
+            "Keduanya",
+            "Tidak ada"
+          ],
+          "correct": 2,
+          "explanation": "E-commerce diatur UU ITE dan UU Perdagangan."
+        },
+        {
+          "id": 14,
+          "question": "Data sensitif menurut UU PDP?",
+          "options": [
+            "Nama lengkap",
+            "Kesehatan, biometrik, keuangan",
+            "Alamat email",
+            "Nomor telepon"
+          ],
+          "correct": 1,
+          "explanation": "Data sensitif: kesehatan, biometrik, keuangan."
+        },
+        {
+          "id": 15,
+          "question": "Pelanggaran hak cipta digital?",
+          "options": [
+            "Piracy",
+            "Hacking",
+            "Phishing",
+            "Spamming"
+          ],
+          "correct": 0,
+          "explanation": "Piracy = pembajakan karya digital."
         }
       ]
     }

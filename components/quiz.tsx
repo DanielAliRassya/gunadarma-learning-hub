@@ -17,14 +17,20 @@ interface QuizProps {
 }
 
 export default function Quiz({ questions, courseName }: QuizProps) {
+  // Randomly select 5 questions from pool
+  const [quizQuestions] = useState(() => {
+    const shuffled = [...questions].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, Math.min(5, questions.length));
+  });
+  
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState(0);
   const [completed, setCompleted] = useState(false);
-  const [answers, setAnswers] = useState<(number | null)[]>(Array(questions.length).fill(null));
+  const [answers, setAnswers] = useState<(number | null)[]>(Array(quizQuestions.length).fill(null));
 
-  const currentQuestion = questions[currentIndex];
+  const currentQuestion = quizQuestions[currentIndex];
   const isCorrect = selectedAnswer === currentQuestion.correct;
 
   const handleSelectAnswer = (index: number) => {
@@ -47,7 +53,7 @@ export default function Quiz({ questions, courseName }: QuizProps) {
   };
 
   const handleNext = () => {
-    if (currentIndex < questions.length - 1) {
+    if (currentIndex < quizQuestions.length - 1) {
       setCurrentIndex(currentIndex + 1);
       setSelectedAnswer(answers[currentIndex + 1] ?? null);
       setShowResult(false);
@@ -57,15 +63,22 @@ export default function Quiz({ questions, courseName }: QuizProps) {
   };
 
   const handleRestart = () => {
+    // Reselect random 5 questions
+    const shuffled = [...questions].sort(() => Math.random() - 0.5);
+    const newQuiz = shuffled.slice(0, Math.min(5, questions.length));
+    
+    // Reset state with new questions
+    quizQuestions.length = 0;
+    quizQuestions.push(...newQuiz);
     setCurrentIndex(0);
     setSelectedAnswer(null);
     setShowResult(false);
     setScore(0);
     setCompleted(false);
-    setAnswers(Array(questions.length).fill(null));
+    setAnswers(Array(quizQuestions.length).fill(null));
   };
 
-  const percentage = Math.round((score / questions.length) * 100);
+  const percentage = Math.round((score / quizQuestions.length) * 100);
 
   if (completed) {
     return (
@@ -82,7 +95,7 @@ export default function Quiz({ questions, courseName }: QuizProps) {
           {/* Score Display */}
           <div className="bg-gradient-to-r from-blue-600 to-emerald-600 rounded-lg p-8 text-white mb-8">
             <p className="text-lg mb-2">Skor Anda</p>
-            <div className="text-6xl font-bold mb-2">{score}/{questions.length}</div>
+            <div className="text-6xl font-bold mb-2">{score}/{quizQuestions.length}</div>
             <p className="text-2xl font-semibold">{percentage}%</p>
           </div>
 
@@ -115,7 +128,7 @@ export default function Quiz({ questions, courseName }: QuizProps) {
           <div className="bg-slate-100 dark:bg-slate-700 rounded-lg p-6 mb-8 text-left">
             <h3 className="font-bold text-lg mb-4">Ringkasan Jawaban:</h3>
             <div className="space-y-2">
-              {questions.map((q, idx) => (
+              {quizQuestions.map((q, idx) => (
                 <div
                   key={idx}
                   className="flex items-center gap-3 p-3 bg-white dark:bg-slate-800 rounded"
@@ -151,16 +164,16 @@ export default function Quiz({ questions, courseName }: QuizProps) {
       <div className="mb-8">
         <div className="flex justify-between items-center mb-3">
           <p className="text-sm font-semibold text-slate-600 dark:text-slate-400">
-            Soal {currentIndex + 1} dari {questions.length}
+            Soal {currentIndex + 1} dari {quizQuestions.length}
           </p>
           <p className="text-sm font-semibold text-blue-600 dark:text-blue-400">
-            Skor: {score}/{questions.length}
+            Skor: {score}/{quizQuestions.length}
           </p>
         </div>
         <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
           <div
             className="bg-blue-600 h-2 rounded-full transition-all duration-300"
-            style={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }}
+            style={{ width: `${((currentIndex + 1) / quizQuestions.length) * 100}%` }}
           ></div>
         </div>
       </div>
@@ -261,7 +274,7 @@ export default function Quiz({ questions, courseName }: QuizProps) {
               onClick={handleNext}
               className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-semibold transition"
             >
-              {currentIndex === questions.length - 1 ? "Selesai" : "Soal Berikutnya"}
+              {currentIndex === quizQuestions.length - 1 ? "Selesai" : "Soal Berikutnya"}
             </button>
           </>
         )}
