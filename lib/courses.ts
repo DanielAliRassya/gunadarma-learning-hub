@@ -1,5 +1,12 @@
 import coursesData from "@/courses-data.json";
 
+export interface LearningMaterial {
+  week: number;
+  title: string;
+  summary: string;
+  key_concepts: string[];
+}
+
 export interface Course {
   id: string;
   code: string;
@@ -13,6 +20,7 @@ export interface Course {
   description?: string;
   topics?: string[];
   youtube_playlists?: { title: string; url: string }[];
+  learning_materials?: LearningMaterial[];
 }
 
 export const courses: Course[] = coursesData.courses;
