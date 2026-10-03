@@ -28,16 +28,16 @@
       ],
       "youtube_playlists": [
         {
-          "title": "Python Programming Tutorial - Algoritma & Flowchart (Pembahasan Lengkap)",
-          "url": "https://www.youtube.com/playlist?list=PLrAXtmErZgOeiKm4sgNOknGvNjby9efdf"
+          "title": "Python for Beginners – Full Course [Programming Tutorial] - Mosh",
+          "url": "https://www.youtube.com/watch?v=eWRfhZUzrAc"
         },
         {
-          "title": "Algoritma dan Pemrograman - Full Lecture Series",
-          "url": "https://www.youtube.com/playlist?list=PLKoDMPp1D36zRO7MWBZ8qp1R-g5Kxp_7A"
+          "title": "Harvard CS50's Introduction to Programming with Python",
+          "url": "https://www.youtube.com/watch?v=nLRL_NcnK-4"
         },
         {
-          "title": "Python Data Structures & Algorithms - Complete Course",
-          "url": "https://www.youtube.com/playlist?list=PLdo5W4Nhv31bbKJzrsKfMqWXQsK4G3czk"
+          "title": "Python Full Course for Beginners - Programming Tutorial",
+          "url": "https://www.youtube.com/watch?v=_uQrJ0TkZlc"
         }
       ],
       "learning_materials": [
@@ -385,12 +385,12 @@
       ],
       "youtube_playlists": [
         {
-          "title": "Python Programming Praktikum - Hands-on Tutorial",
-          "url": "https://www.youtube.com/playlist?list=PLrAXtmErZgOd9x8_zJHJxjhKJJ5Q-Xc9Y"
+          "title": "Python for Beginners – Full Course [Programming Tutorial]",
+          "url": "https://www.youtube.com/watch?v=eWRfhZUzrAc"
         },
         {
-          "title": "Praktikum Python untuk Pemula - Step by Step",
-          "url": "https://www.youtube.com/playlist?list=PLlngP2dxJGP1XnHnvgB1sVxKW6Px8NQMH"
+          "title": "Bro Code - Python Full Course",
+          "url": "https://www.youtube.com/watch?v=XKHEtdqhLK8"
         }
       ],
       "rps_url": null,
@@ -709,12 +709,12 @@
       ],
       "youtube_playlists": [
         {
-          "title": "Matematika Diskrit - Informatika STEI-ITB (Full Course)",
-          "url": "https://www.youtube.com/playlist?list=PLyYkJZR4un3pMu_kUSlzPQwi49dSRpUbb"
+          "title": "The Essence of Algebra - 3Blue1Brown",
+          "url": "https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr"
         },
         {
-          "title": "Matematika Diskrit ITB - Comprehensive Lectures",
-          "url": "https://www.youtube.com/playlist?list=PLcGQGuPeJvQlOS5WwBhUn4vJfIxLFbsXN"
+          "title": "Abstract Algebra - Socratica",
+          "url": "https://www.youtube.com/watch?v=6E_3LDCEJjM"
         }
       ],
       "learning_materials": [
@@ -1046,12 +1046,12 @@
       ],
       "youtube_playlists": [
         {
-          "title": "Kalkulus Dasar - Fungsi, Limit, Turunan, Integral",
-          "url": "https://www.youtube.com/playlist?list=PLzXoPcH8H7OU16u8Qzz0iJrxCVu2J5e3d"
+          "title": "The Essence of Calculus - 3Blue1Brown",
+          "url": "https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr"
         },
         {
-          "title": "Matematika Dasar 1 - Persamaan & Pertidaksamaan",
-          "url": "https://www.youtube.com/playlist?list=PLB3YPMRSMxGcnGEPiS-UPOCYmHbYRpQ0z"
+          "title": "Calculus Full Course - Professor Leonard",
+          "url": "https://www.youtube.com/watch?v=7gigNsz4Oe8"
         }
       ],
       "rps_url": "https://rps.gunadarma.ac.id/file/1761528516028_mk05_rps_matematika_dasar_1.pdf",
@@ -1374,12 +1374,12 @@
       ],
       "youtube_playlists": [
         {
-          "title": "Fisika Dasar - Kinematika, Dinamika, Energi",
-          "url": "https://www.youtube.com/playlist?list=PLJicmE8fK0EiFnX7NrWWps38-mKnsVeXP"
+          "title": "Physics 101 - Crash Course Physics",
+          "url": "https://www.youtube.com/playlist?list=PL8dPuuaLjXtN0ge7yDk_UA0ldZJdhwkoV"
         },
         {
-          "title": "Kimia Dasar - Struktur Atom & Reaksi Kimia",
-          "url": "https://www.youtube.com/playlist?list=PLXu5CqqHXlUeP6lLmTWnvQV7iW_uJIyid"
+          "title": "Chemistry 101 - Crash Course Chemistry",
+          "url": "https://www.youtube.com/playlist?list=PL8dPuuaLjXtPHffUPBlDT6G6oBQMlMZpk"
         }
       ],
       "quiz": [
@@ -1705,16 +1705,12 @@
       ],
       "youtube_playlists": [
         {
-          "title": "Pengantar Teknologi Informasi - Complete Course",
-          "url": "https://www.youtube.com/playlist?list=PLEKq2ycw9EvM2LsQhIG3pWl-sbEB33cIr"
+          "title": "Crash Course Computer Science",
+          "url": "https://www.youtube.com/playlist?list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo"
         },
         {
-          "title": "Pengantar Informatika - Full Lecture Series",
-          "url": "https://www.youtube.com/playlist?list=PL5iysx5qb3-u7oDw3k1VI_ofkEE8Sb2cu"
-        },
-        {
-          "title": "Pengantar Teknik Informatika - Comprehensive",
-          "url": "https://www.youtube.com/playlist?list=PLLbMDRjzFC-us20EFPR6TIeQXwwbzFui4"
+          "title": "Computer Science 101 - Khan Academy",
+          "url": "https://www.youtube.com/khanacademy/playlists"
         }
       ],
       "rps_url": "https://rps.gunadarma.ac.id/file/1678430797434_pengantar_teknologi_komputer_dan_informatika_it045220.pdf",
@@ -2073,12 +2069,12 @@
       ],
       "youtube_playlists": [
         {
-          "title": "English Grammar - Complete Course for Beginners",
-          "url": "https://www.youtube.com/playlist?list=PLKoDMPp1D36ahCfUZNE35gj5-V5J9ECJ9"
+          "title": "English Grammar Basics - Khan Academy",
+          "url": "https://www.youtube.com/watch?v=s-sQXQG9AE"
         },
         {
-          "title": "English Tenses - Comprehensive Lesson Series",
-          "url": "https://www.youtube.com/playlist?list=PLplrFQzVuyKwpxFgfVyGZCvBf4PtCKb3j"
+          "title": "Learn English with EnglishClass101.com",
+          "url": "https://www.youtube.com/playlist?list=PLhPLKnxO0pQV8THNzrHJ0dF0uO5J7Tguz"
         }
       ],
       "quiz": [
@@ -2400,12 +2396,12 @@
       ],
       "youtube_playlists": [
         {
-          "title": "Pembelajaran Bahasa Indonesia - Grammar & Writing",
-          "url": "https://www.youtube.com/playlist?list=PLmgQRB8QZAJKJTf9g7MJwKEuF5x8N7zRw"
+          "title": "Bahasa Indonesia untuk Penutur Asing - BIPA Indonesia",
+          "url": "https://www.youtube.com/watch?v=sVXUkEV3O4U"
         },
         {
-          "title": "PUEBI & Tanda Baca - Aturan Penulisan Baku",
-          "url": "https://www.youtube.com/playlist?list=PLSPfKJcQJQkqMiYfGHkbEbLRGM8aJJdKA"
+          "title": "Belajar Bahasa Indonesia - Tutorial Lengkap",
+          "url": "https://www.youtube.com/playlist?list=PL7Lok4vPgfAfJh6kU1AG9R8H8B3t6lWyn"
         }
       ],
       "rps_url": "https://rps.gunadarma.ac.id/file/1678339288715_bahasa_indonesia_1_pb045104.pdf",
@@ -2727,12 +2723,12 @@
       ],
       "youtube_playlists": [
         {
-          "title": "Pancasila & Sejarah Perjuangan Indonesia",
-          "url": "https://www.youtube.com/playlist?list=PLaSPmrNEJ6RZcQlZiV3rDqmiFoKU7MWeI"
+          "title": "Pendidikan Pancasila - Kemendikbudristek",
+          "url": "https://www.youtube.com/watch?v=BwBTfGx2tbk"
         },
         {
-          "title": "Nilai-Nilai Pancasila dan Implementasi Saat Ini",
-          "url": "https://www.youtube.com/playlist?list=PLz_PSMQPBJ_wPVmVb9sn0hQ0S5sUWRR1K"
+          "title": "Materi Pancasila dan Kewarganegaraan",
+          "url": "https://www.youtube.com/playlist?list=PLvVa5hicnZSbhqMb4MxkcXzxtg5zjGslr"
         }
       ],
       "rps_url": "https://rps.gunadarma.ac.id/file/1761528322712_mk01_rps_pendidikan_pancasila.pdf",
@@ -3059,12 +3055,12 @@
       ],
       "youtube_playlists": [
         {
-          "title": "Hukum TIK & Cybercrime - Regulasi Indonesia",
-          "url": "https://www.youtube.com/playlist?list=PLbCVJx7dVRQLvAvLTcEk6EH9qLCF5RKPj"
+          "title": "Hukum Siber dan Keamanan Informasi - Channel Hukum Digital",
+          "url": "https://www.youtube.com/watch?v=pV1NMhHQxHQ"
         },
         {
-          "title": "Intellectual Property & Data Privacy Law",
-          "url": "https://www.youtube.com/playlist?list=PLdV4J0FlpIFLLX1g_VyLfbSShKxDqPx1l"
+          "title": "Legal Tech Indonesia - Aspek Hukum Teknologi",
+          "url": "https://www.youtube.com/watch?v=GkmGLNn93NQ"
         }
       ],
       "rps_url": "https://rps.gunadarma.ac.id/file/1678342917866_legal_aspek_produk_teknologi_informasi_dan_komunikasi_pb045202.pdf",
