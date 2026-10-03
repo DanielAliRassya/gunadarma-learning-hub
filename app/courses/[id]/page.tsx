@@ -77,7 +77,11 @@ export default function CoursePage() {
               <h1 className="text-3xl md:text-4xl font-bold mb-4">{course.name}</h1>
               <p className="text-white/90 mb-4">{course.description}</p>
             </div>
-            <div className="w-16 h-16 bg-white/20 rounded-lg" />
+            <div className="flex items-center justify-center w-16 h-16 bg-white/20 rounded-lg">
+              <span className="text-white text-2xl font-bold">
+                {course.code.slice(0,2)}
+              </span>
+            </div>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -92,7 +96,7 @@ export default function CoursePage() {
               <User className="w-4 h-4" />
               <div>
                 <div className="text-xs text-white/70">Dosen</div>
-                <div className="font-semibold">{course.lecturer.split(" ")[0]}</div>
+                <div className="font-semibold">{course.lecturer}</div>
               </div>
             </div>
             <div className="flex items-center gap-2">
