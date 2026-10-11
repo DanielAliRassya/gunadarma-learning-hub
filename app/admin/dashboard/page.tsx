@@ -240,12 +240,27 @@ function MaterialForm({ courseId, onSuccess, onCancel }: any) {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [week, setWeek] = useState("");
-  const [fileUrl, setFileUrl] = useState("");
+  const [file, setFile] = useState<File | null>(null);
+  const [link, setLink] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+
+    let fileUrl = link || null;
+
+    // If file selected, upload to Supabase Storage (simplified: use base64 for now)
+    if (file) {
+      const formData = new FormData();
+      formData.append("file", file);
+      // Upload to a simple endpoint or convert to base64
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      fileUrl = await new Promise((resolve) => {
+        reader.onloadend = () => resolve(reader.result as string);
+      });
+    }
 
     await fetch("/api/materials", {
       method: "POST",
@@ -255,7 +270,7 @@ function MaterialForm({ courseId, onSuccess, onCancel }: any) {
         title,
         content,
         week: week ? parseInt(week) : null,
-        file_url: fileUrl || null,
+        file_url: fileUrl,
       }),
     });
 
@@ -288,13 +303,26 @@ function MaterialForm({ courseId, onSuccess, onCancel }: any) {
         onChange={(e) => setWeek(e.target.value)}
         className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-lg bg-slate-50 dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
-      <input
-        type="url"
-        placeholder="URL File (opsional)"
-        value={fileUrl}
-        onChange={(e) => setFileUrl(e.target.value)}
-        className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-lg bg-slate-50 dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
-      />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div>
+          <label className="block text-xs text-slate-500 mb-1">Upload File (opsional)</label>
+          <input
+            type="file"
+            onChange={(e) => setFile(e.target.files?.[0] || null)}
+            className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-lg bg-slate-50 dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+          />
+        </div>
+        <div>
+          <label className="block text-xs text-slate-500 mb-1">Atau Link Eksternal (opsional)</label>
+          <input
+            type="url"
+            placeholder="https://drive.google.com/..."
+            value={link}
+            onChange={(e) => setLink(e.target.value)}
+            className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-lg bg-slate-50 dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+          />
+        </div>
+      </div>
       <div className="flex gap-2">
         <button
           type="submit"
@@ -319,12 +347,23 @@ function HomeworkForm({ courseId, onSuccess, onCancel }: any) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [dueDate, setDueDate] = useState("");
-  const [fileUrl, setFileUrl] = useState("");
+  const [file, setFile] = useState<File | null>(null);
+  const [link, setLink] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+
+    let fileUrl = link || null;
+
+    if (file) {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      fileUrl = await new Promise((resolve) => {
+        reader.onloadend = () => resolve(reader.result as string);
+      });
+    }
 
     await fetch("/api/homework", {
       method: "POST",
@@ -334,7 +373,7 @@ function HomeworkForm({ courseId, onSuccess, onCancel }: any) {
         title,
         description,
         due_date: dueDate || null,
-        file_url: fileUrl || null,
+        file_url: fileUrl,
       }),
     });
 
@@ -367,13 +406,26 @@ function HomeworkForm({ courseId, onSuccess, onCancel }: any) {
         onChange={(e) => setDueDate(e.target.value)}
         className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-lg bg-slate-50 dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-purple-500"
       />
-      <input
-        type="url"
-        placeholder="URL File (opsional)"
-        value={fileUrl}
-        onChange={(e) => setFileUrl(e.target.value)}
-        className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-lg bg-slate-50 dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-purple-500"
-      />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div>
+          <label className="block text-xs text-slate-500 mb-1">Upload File (opsional)</label>
+          <input
+            type="file"
+            onChange={(e) => setFile(e.target.files?.[0] || null)}
+            className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-lg bg-slate-50 dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm"
+          />
+        </div>
+        <div>
+          <label className="block text-xs text-slate-500 mb-1">Atau Link Eksternal (opsional)</label>
+          <input
+            type="url"
+            placeholder="https://drive.google.com/..."
+            value={link}
+            onChange={(e) => setLink(e.target.value)}
+            className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-lg bg-slate-50 dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm"
+          />
+        </div>
+      </div>
       <div className="flex gap-2">
         <button
           type="submit"
