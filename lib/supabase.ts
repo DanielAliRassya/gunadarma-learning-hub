@@ -1,9 +1,28 @@
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+let supabaseClient: any = null;
+
+export const getSupabase = () => {
+  if (!supabaseUrl || !supabaseAnonKey) {
+    throw new Error('Supabase environment variables not set');
+  }
+  
+  if (!supabaseClient) {
+    supabaseClient = createClient(supabaseUrl, supabaseAnonKey);
+  }
+  
+  return supabaseClient;
+};
+
+// For backward compatibility
+export const supabase = {
+  from: (table: string) => {
+    return getSupabase().from(table);
+  },
+};
 
 export interface CourseMaterial {
   id: string;
