@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
-import { supabase } from '@/lib/supabase';
+import { authOptions } from '@/app/api/auth/[...nextauth]/route';
+import { getSupabase } from '@/lib/supabase';
 
-// GET - ambil semua materials untuk course
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const courseId = searchParams.get('course_id');
@@ -11,7 +11,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: 'course_id required' }, { status: 400 });
   }
 
-  const { data, error } = await supabase
+  const { data, error } = await getSupabase()
     .from('course_materials')
     .select('*')
     .eq('course_id', courseId)
@@ -26,7 +26,7 @@ export async function GET(request: NextRequest) {
 
 // POST - create material (admin only)
 export async function POST(request: NextRequest) {
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
   if (!session) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
@@ -41,7 +41,7 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const { data, error } = await supabase
+  const { data, error } = await getSupabase()
     .from('course_materials')
     .insert([{ course_id, title, content, file_url, week }])
     .select();
@@ -55,7 +55,7 @@ export async function POST(request: NextRequest) {
 
 // PUT - update material (admin only)
 export async function PUT(request: NextRequest) {
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
   if (!session) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
@@ -67,7 +67,7 @@ export async function PUT(request: NextRequest) {
     return NextResponse.json({ error: 'id required' }, { status: 400 });
   }
 
-  const { data, error } = await supabase
+  const { data, error } = await getSupabase()
     .from('course_materials')
     .update({ title, content, file_url, week, updated_at: new Date().toISOString() })
     .eq('id', id)
@@ -82,7 +82,7 @@ export async function PUT(request: NextRequest) {
 
 // DELETE - hapus material (admin only)
 export async function DELETE(request: NextRequest) {
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
   if (!session) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
@@ -94,7 +94,7 @@ export async function DELETE(request: NextRequest) {
     return NextResponse.json({ error: 'id required' }, { status: 400 });
   }
 
-  const { error } = await supabase
+  const { error } = await getSupabase()
     .from('course_materials')
     .delete()
     .eq('id', id);

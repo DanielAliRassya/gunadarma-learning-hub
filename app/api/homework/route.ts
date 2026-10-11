@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
-import { supabase } from '@/lib/supabase';
+import { authOptions } from '@/app/api/auth/[...nextauth]/route';
+import { getSupabase } from '@/lib/supabase';
 
-// GET - ambil semua homework untuk course
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const courseId = searchParams.get('course_id');
@@ -11,11 +11,11 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: 'course_id required' }, { status: 400 });
   }
 
-  const { data, error } = await supabase
+  const { data, error } = await getSupabase()
     .from('homework')
     .select('*')
     .eq('course_id', courseId)
-    .order('due_date', { ascending: true });
+    .order('created_at', { ascending: false });
 
   if (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });
@@ -26,7 +26,7 @@ export async function GET(request: NextRequest) {
 
 // POST - create homework (admin only)
 export async function POST(request: NextRequest) {
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
   if (!session) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
@@ -41,7 +41,7 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const { data, error } = await supabase
+  const { data, error } = await getSupabase()
     .from('homework')
     .insert([{ course_id, title, description, due_date, file_url }])
     .select();
@@ -55,7 +55,7 @@ export async function POST(request: NextRequest) {
 
 // PUT - update homework (admin only)
 export async function PUT(request: NextRequest) {
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
   if (!session) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
@@ -67,7 +67,7 @@ export async function PUT(request: NextRequest) {
     return NextResponse.json({ error: 'id required' }, { status: 400 });
   }
 
-  const { data, error } = await supabase
+  const { data, error } = await getSupabase()
     .from('homework')
     .update({ title, description, due_date, file_url, updated_at: new Date().toISOString() })
     .eq('id', id)
@@ -82,7 +82,7 @@ export async function PUT(request: NextRequest) {
 
 // DELETE - hapus homework (admin only)
 export async function DELETE(request: NextRequest) {
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
   if (!session) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
@@ -94,7 +94,7 @@ export async function DELETE(request: NextRequest) {
     return NextResponse.json({ error: 'id required' }, { status: 400 });
   }
 
-  const { error } = await supabase
+  const { error } = await getSupabase()
     .from('homework')
     .delete()
     .eq('id', id);
