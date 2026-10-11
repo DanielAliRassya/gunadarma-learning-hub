@@ -4,8 +4,8 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 import { getCourseById } from "@/lib/courses";
 import Quiz from "@/components/quiz";
-import { ArrowLeft, Clock, User, MapPin, FileText, PlayCircle, CheckCircle, ExternalLink, BookOpen } from "lucide-react";
-import { useState } from "react";
+import { ArrowLeft, Clock, User, MapPin, FileText, PlayCircle, CheckCircle, ExternalLink, BookOpen, ClipboardList, Calendar } from "lucide-react";
+import { useState, useEffect } from "react";
 
 // Helper to extract YouTube video ID from URL
 function getYouTubeId(url: string): string | null {
@@ -31,17 +31,77 @@ function getYouTubeEmbed(url: string): string | null {
   return null;
 }
 
+interface CourseMaterial {
+  id: string;
+  course_id: string;
+  title: string;
+  content: string;
+  file_url?: string;
+  week?: number;
+  created_at: string;
+}
+
+interface Homework {
+  id: string;
+  course_id: string;
+  title: string;
+  description: string;
+  due_date?: string;
+  file_url?: string;
+  created_at: string;
+}
+
 export default function CoursePage() {
   const params = useParams();
   const courseId = params.id as string;
   const course = getCourseById(courseId);
-  const [activeTab, setActiveTab] = useState<"overview" | "videos" | "materials" | "topics" | "practice" | "notes">("overview");
+  const [activeTab, setActiveTab] = useState<"overview" | "videos" | "materials" | "homework" | "topics" | "practice" | "notes">("overview");
   const [notes, setNotes] = useState(() => {
     if (typeof window !== "undefined") {
       return localStorage.getItem(`notes-${courseId}`) || "";
     }
     return "";
   });
+
+  const [dbMaterials, setDbMaterials] = useState<CourseMaterial[]>([]);
+  const [dbHomework, setDbHomework] = useState<Homework[]>([]);
+  const [loadingMaterials, setLoadingMaterials] = useState(false);
+  const [loadingHomework, setLoadingHomework] = useState(false);
+
+  useEffect(() => {
+    if (courseId) {
+      loadMaterials();
+      loadHomework();
+    }
+  }, [courseId]);
+
+  const loadMaterials = async () => {
+    setLoadingMaterials(true);
+    try {
+      const res = await fetch(`/api/materials?course_id=${courseId}`);
+      if (res.ok) {
+        const data = await res.json();
+        setDbMaterials(Array.isArray(data) ? data : []);
+      }
+    } catch (e) {
+      // silent
+    }
+    setLoadingMaterials(false);
+  };
+
+  const loadHomework = async () => {
+    setLoadingHomework(true);
+    try {
+      const res = await fetch(`/api/homework?course_id=${courseId}`);
+      if (res.ok) {
+        const data = await res.json();
+        setDbHomework(Array.isArray(data) ? data : []);
+      }
+    } catch (e) {
+      // silent
+    }
+    setLoadingHomework(false);
+  };
 
   if (!course) {
     return (
@@ -69,19 +129,33 @@ export default function CoursePage() {
 
         {/* Header */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-white mb-8">
-          <div className="flex items-start justify-between mb-6">
-            <div>
+          <div className="flex items-start justify-between mb-6 gap-4">
+            <div className="flex-1">
               <span className="badge bg-white/20 text-white border-0 mb-2">
                 {course.code}
               </span>
               <h1 className="text-3xl md:text-4xl font-bold mb-4">{course.name}</h1>
               <p className="text-white/90 mb-4">{course.description}</p>
             </div>
-            <div className="flex items-center justify-center w-16 h-16 bg-white/20 rounded-lg">
-              <span className="text-white text-2xl font-bold">
-                {course.code.slice(0,2)}
-              </span>
-            </div>
+
+            {/* Lecturer Photo */}
+            {course.lecturer_image_url && (
+              <div className="flex-shrink-0">
+                <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-white/30 shadow-lg bg-white/20">
+                  <img
+                    src={course.lecturer_image_url}
+                    alt={course.lecturer}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = "none";
+                    }}
+                  />
+                </div>
+                <p className="text-xs text-white/80 text-center mt-2 max-w-[8rem] truncate">
+                  {course.lecturer}
+                </p>
+              </div>
+            )}
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -136,6 +210,7 @@ export default function CoursePage() {
               { id: "overview", label: "Overview" },
               { id: "videos", label: "Video" },
               { id: "materials", label: "Materi" },
+              { id: "homework", label: "Tugas" },
               { id: "topics", label: "Topik" },
               { id: "practice", label: "Latihan" },
               { id: "notes", label: "Catatan" },
@@ -234,9 +309,57 @@ export default function CoursePage() {
 
           {activeTab === "materials" && (
             <div className="space-y-4">
-              {course.learning_materials && course.learning_materials.length > 0 ? (
-                <>
-                  {/* PDF Viewer Button */}
+              {/* DB Materials (admin-uploaded) */}
+              {dbMaterials.length > 0 && (
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-semibold">
+                    <BookOpen className="w-5 h-5" />
+                    <h3 className="text-lg">Materi dari Dosen</h3>
+                  </div>
+                  {dbMaterials.map((mat) => (
+                    <div
+                      key={mat.id}
+                      className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-6 hover:shadow-lg transition"
+                    >
+                      <div className="flex items-start gap-4 mb-4">
+                        <div className="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-lg flex items-center justify-center font-bold flex-shrink-0">
+                          {mat.week ? `W${mat.week}` : "📚"}
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-lg font-bold mb-1">{mat.title}</h3>
+                          {mat.week && (
+                            <p className="text-sm text-slate-500 dark:text-slate-400">Minggu {mat.week}</p>
+                          )}
+                        </div>
+                      </div>
+                      <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed whitespace-pre-wrap">
+                        {mat.content}
+                      </p>
+                      {mat.file_url && (
+                        <a
+                          href={mat.file_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold"
+                        >
+                          <FileText className="w-4 h-4" />
+                          Download Materi
+                          <ExternalLink className="w-3 h-3" />
+                        </a>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* JSON materials (fallback) */}
+              {course.learning_materials && course.learning_materials.length > 0 && (
+                <div className="space-y-3">
+                  {dbMaterials.length > 0 && (
+                    <h3 className="text-lg font-semibold text-slate-700 dark:text-slate-300 mt-6">
+                      Materi Tambahan
+                    </h3>
+                  )}
                   <div className="bg-gradient-to-r from-blue-600 to-emerald-600 rounded-lg p-6 text-white mb-6">
                     <div className="flex items-center gap-4">
                       <BookOpen className="w-12 h-12" />
@@ -259,7 +382,6 @@ export default function CoursePage() {
                     </div>
                   </div>
 
-                  {/* Preview Cards */}
                   {course.learning_materials.map((material, i) => (
                     <div
                       key={i}
@@ -292,14 +414,15 @@ export default function CoursePage() {
                       </div>
                     </div>
                   ))}
-                </>
-              ) : (
+                </div>
+              )}
+
+              {dbMaterials.length === 0 && (!course.learning_materials || course.learning_materials.length === 0) && (
                 <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-12 text-center">
                   <BookOpen className="w-12 h-12 text-slate-400 mx-auto mb-4" />
                   <p className="text-slate-600 dark:text-slate-400 mb-4">
                     Materi pembelajaran belum tersedia
                   </p>
-                  {/* Check if PDF exists anyway */}
                   <a
                     href={`/${courseId}_materi.pdf`}
                     target="_blank"
@@ -309,6 +432,57 @@ export default function CoursePage() {
                     <FileText className="w-4 h-4" />
                     Coba buka PDF
                   </a>
+                </div>
+              )}
+            </div>
+          )}
+
+          {activeTab === "homework" && (
+            <div className="space-y-4">
+              {dbHomework.length > 0 ? (
+                dbHomework.map((hw) => (
+                  <div
+                    key={hw.id}
+                    className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-6 hover:shadow-lg transition"
+                  >
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <ClipboardList className="w-5 h-5" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-lg font-bold mb-1">{hw.title}</h3>
+                        {hw.due_date && (
+                          <div className="flex items-center gap-1 text-sm text-orange-600 dark:text-orange-400 mt-1">
+                            <Calendar className="w-4 h-4" />
+                            <span>Deadline: {new Date(hw.due_date).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                    <p className="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed whitespace-pre-wrap">
+                      {hw.description}
+                    </p>
+                    {hw.file_url && (
+                      <a
+                        href={hw.file_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold"
+                      >
+                        <FileText className="w-4 h-4" />
+                        Download Soal
+                        <ExternalLink className="w-3 h-3" />
+                      </a>
+                    )}
+                  </div>
+                ))
+              ) : (
+                <div className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-12 text-center">
+                  <ClipboardList className="w-12 h-12 text-slate-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-bold mb-2">Belum Ada Tugas</h3>
+                  <p className="text-slate-600 dark:text-slate-400">
+                    Tugas rumah akan ditampilkan di sini setelah dosen/admin menambahkannya.
+                  </p>
                 </div>
               )}
             </div>

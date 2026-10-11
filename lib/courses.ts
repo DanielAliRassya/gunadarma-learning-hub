@@ -29,6 +29,7 @@ export interface Course {
   time: string;
   lecturer: string;
   room: string;
+  lecturer_image_url?: string;
   rps_url?: string | null;
   description: string;
   topics: string[];
